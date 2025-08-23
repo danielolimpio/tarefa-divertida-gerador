@@ -2,17 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Download, Star, Users, FileText, Award } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export function HeroSection() {
-  const stats = [
-    { icon: Users, value: "50.000+", label: "Professores" },
-    { icon: FileText, value: "10.000+", label: "Atividades" },
-    { icon: Star, value: "4.9/5", label: "Avaliação" },
-    { icon: Award, value: "100%", label: "Gratuito" },
-  ];
-
-  return (
-    <section className="relative overflow-hidden bg-gradient-hero">
+  const stats = [{
+    icon: Users,
+    value: "50.000+",
+    label: "Professores"
+  }, {
+    icon: FileText,
+    value: "10.000+",
+    label: "Atividades"
+  }, {
+    icon: Star,
+    value: "4.9/5",
+    label: "Avaliação"
+  }, {
+    icon: Award,
+    value: "100%",
+    label: "Gratuito"
+  }];
+  return <section className="relative overflow-hidden bg-gradient-hero">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       
@@ -53,15 +61,13 @@ export function HeroSection() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center sm:text-left">
+              {stats.map(stat => <div key={stat.label} className="text-center sm:text-left">
                   <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
                     <stat.icon className="h-4 w-4 text-primary" />
                     <span className="text-2xl font-bold text-foreground">{stat.value}</span>
                   </div>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
@@ -79,24 +85,24 @@ export function HeroSection() {
                       <span className="text-lg">📚</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">Atividade de Alfabetização</p>
-                      <p className="text-xs text-muted-foreground">1º Ano - Português</p>
+                      <p className="font-semibold text-3xl">Atividade de Alfabetização</p>
+                      <p className="text-muted-foreground text-xl">1º Ano - Português</p>
                     </div>
                   </div>
-                  <div className="h-20 bg-muted/30 rounded animate-pulse" />
+                  
                 </div>
 
                 <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex items-center gap-3 mb-3 rounded-2xl">
                     <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
                       <span className="text-lg">🔢</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">Exercícios de Matemática</p>
-                      <p className="text-xs text-muted-foreground">3º Ano - Multiplicação</p>
+                      <p className="font-semibold text-2xl">Exercícios de Matemática</p>
+                      <p className="text-muted-foreground text-xl">3º Ano - Multiplicação</p>
                     </div>
                   </div>
-                  <div className="h-20 bg-muted/30 rounded animate-pulse" />
+                  
                 </div>
 
                 <div className="bg-white rounded-lg p-4 shadow-sm">
@@ -105,17 +111,16 @@ export function HeroSection() {
                       <span className="text-lg">🎨</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">Atividade Lúdica</p>
-                      <p className="text-xs text-muted-foreground">Educação Infantil - Colorir</p>
+                      <p className="font-semibold text-2xl">Atividade Lúdica</p>
+                      <p className="text-muted-foreground text-xl">Educação Infantil - Colorir</p>
                     </div>
                   </div>
-                  <div className="h-20 bg-muted/30 rounded animate-pulse" />
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
