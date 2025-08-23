@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, GraduationCap, ChevronDown, Search, BookOpen, Users, Heart, Download } from "lucide-react";
+import { Menu, X, GraduationCap, ChevronDown, Search, BookOpen, Users, Heart, Download, Brain } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -23,10 +23,10 @@ export function Header() {
       href: "/educacao-infantil",
       description: "Atividades para maternal, jardim e pré-escola",
       items: [
-        { title: "Maternal", href: "/atividades-maternal" },
-        { title: "Jardim 1 e 2", href: "/atividades-jardim" },
-        { title: "Pré-escola", href: "/atividades-pre-escola" },
-        { title: "Alfabetização", href: "/atividades-alfabetizacao" },
+        { title: "Maternal", href: "/gerador" },
+        { title: "Jardim 1 e 2", href: "/gerador" },
+        { title: "Pré-escola", href: "/gerador" },
+        { title: "Alfabetização", href: "/gerador" },
       ]
     },
     {
@@ -34,10 +34,10 @@ export function Header() {
       href: "/ensino-fundamental",
       description: "Atividades do 1º ao 9º ano",
       items: [
-        { title: "1º ao 3º Ano", href: "/atividades-1-3-ano" },
-        { title: "4º e 5º Ano", href: "/atividades-4-5-ano" },
-        { title: "6º ao 9º Ano", href: "/atividades-6-9-ano" },
-        { title: "Reforço Escolar", href: "/reforco-escolar" },
+        { title: "1º ao 3º Ano", href: "/gerador" },
+        { title: "4º e 5º Ano", href: "/gerador" },
+        { title: "6º ao 9º Ano", href: "/gerador" },
+        { title: "Reforço Escolar", href: "/gerador" },
       ]
     },
     {
@@ -45,10 +45,10 @@ export function Header() {
       href: "/materias",
       description: "Atividades organizadas por disciplina",
       items: [
-        { title: "Português", href: "/atividades-portugues" },
-        { title: "Matemática", href: "/atividades-matematica" },
-        { title: "Ciências", href: "/atividades-ciencias" },
-        { title: "História e Geografia", href: "/atividades-historia-geografia" },
+        { title: "Português", href: "/gerador" },
+        { title: "Matemática", href: "/gerador" },
+        { title: "Ciências", href: "/gerador" },
+        { title: "História e Geografia", href: "/gerador" },
       ]
     },
     {
@@ -56,10 +56,10 @@ export function Header() {
       href: "/inclusao",
       description: "Atividades adaptadas e AEE",
       items: [
-        { title: "Autismo", href: "/atividades-autismo" },
-        { title: "TDAH", href: "/atividades-tdah" },
-        { title: "Deficiência Intelectual", href: "/atividades-deficiencia-intelectual" },
-        { title: "AEE", href: "/atividades-aee" },
+        { title: "Autismo", href: "/gerador" },
+        { title: "TDAH", href: "/gerador" },
+        { title: "Deficiência Intelectual", href: "/gerador" },
+        { title: "AEE", href: "/gerador" },
       ]
     },
   ];
@@ -138,8 +138,8 @@ export function Header() {
             </Button>
             <Button size="sm" className="bg-gradient-primary hover:opacity-90" asChild>
               <Link to="/gerador">
-                <Download className="mr-2 h-4 w-4" />
-                Gerar Atividades
+                <Brain className="mr-2 h-4 w-4 text-blue-400 fill-yellow-400" />
+                Atividades Especiais
               </Link>
             </Button>
           </div>

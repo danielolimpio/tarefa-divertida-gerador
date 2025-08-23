@@ -133,7 +133,7 @@ export function PopularActivitiesSection() {
 
         <div className="text-center mt-8">
           <Button size="lg" asChild>
-            <Link to="/explorar">
+            <Link to="/gerador">
               Ver Todas as Atividades
             </Link>
           </Button>
