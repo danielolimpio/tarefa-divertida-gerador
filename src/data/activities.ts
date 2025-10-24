@@ -639,6 +639,19 @@ import {
   memoryActivities,
 } from './additionalActivities';
 
+import {
+  portuguesMaternal,
+  matematicaMaternal,
+  cienciasMaternal,
+  historiaMaternal,
+  geografiaMaternal,
+  inglesMaternal,
+  artesMaternal,
+  educacaoFisicaMaternal,
+  logicaMaternal,
+  memoriaMaternal,
+} from './maternalActivities';
+
 // Função para obter atividades filtradas
 export function getActivities(filters: {
   grade?: string;
@@ -647,6 +660,16 @@ export function getActivities(filters: {
   count?: number;
 }): Activity[] {
   const allActivities = [
+    ...portuguesMaternal,
+    ...matematicaMaternal,
+    ...cienciasMaternal,
+    ...historiaMaternal,
+    ...geografiaMaternal,
+    ...inglesMaternal,
+    ...artesMaternal,
+    ...educacaoFisicaMaternal,
+    ...logicaMaternal,
+    ...memoriaMaternal,
     ...portugueseActivities,
     ...mathActivities,
     ...ludicrousActivities,

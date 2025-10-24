@@ -169,6 +169,26 @@ export function generateActivityHTML(
         border-top: 2px solid ${isColorful ? '#e2e8f0' : '#666'};
         color: ${isColorful ? '#718096' : '#666'};
       }
+      
+      .watermark {
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 10px;
+        color: #999;
+        opacity: 0.7;
+      }
+      
+      .watermark a {
+        color: #999;
+        text-decoration: none;
+      }
+      
+      .watermark a:hover {
+        text-decoration: underline;
+      }
     </style>
   `;
   
@@ -222,10 +242,9 @@ export function generateActivityHTML(
     `;
   }).join('');
   
-  const footer = `
-    <div class="footer">
-      <p>Atividades geradas pelo Gerador de Tarefas Escolares</p>
-      <p>© 2024 - Educação Interativa</p>
+  const watermark = `
+    <div class="watermark">
+      <p>Copyright 2025 | Todos direitos reservados | <a href="https://atividadeescolar.com" target="_blank">https://atividadeescolar.com</a></p>
     </div>
   `;
   
@@ -241,7 +260,7 @@ export function generateActivityHTML(
     <body>
       ${header}
       ${activitiesHTML}
-      ${footer}
+      ${watermark}
     </body>
     </html>
   `;
