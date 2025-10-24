@@ -18,6 +18,9 @@ const Index = () => {
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
   const [exerciseCount, setExerciseCount] = useState("10");
   const [studentName, setStudentName] = useState("");
+  const [colorMode, setColorMode] = useState<'colorido' | 'pb'>('colorido');
+  const [showPreview, setShowPreview] = useState(false);
+  const [generatedActivities, setGeneratedActivities] = useState<any[]>([]);
 
   const grades = [
     { value: "maternal", label: "Maternal", icon: "🍼" },
@@ -76,7 +79,7 @@ const Index = () => {
     );
   };
 
-  const handleGeneratePDF = () => {
+  const handleGenerate = () => {
     if (!selectedGrade) {
       toast({
         title: "Atenção",
@@ -104,18 +107,56 @@ const Index = () => {
       return;
     }
 
+    // Gerar atividades baseadas nas seleções
+    const activities = getActivities({
+      grade: selectedGrade,
+      subjects: selectedSubjects,
+      types: selectedActivityType,
+      count: parseInt(exerciseCount),
+    });
+
+    if (activities.length === 0) {
+      toast({
+        title: "Nenhuma atividade encontrada",
+        description: "Tente selecionar outras opções.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setGeneratedActivities(activities);
+    return activities;
+  };
+
+  const handleGeneratePDF = () => {
+    const activities = handleGenerate();
+    if (!activities) return;
+
     toast({
       title: "Gerando PDF...",
       description: "Suas atividades estão sendo preparadas para impressão!",
     });
 
-    // Aqui será implementada a lógica de geração do PDF
     setTimeout(() => {
+      const htmlContent = generateActivityHTML(activities, studentName, colorMode);
+      downloadPDF(htmlContent, `atividades_${selectedGrade}_${Date.now()}.pdf`);
+      
       toast({
         title: "PDF Gerado com Sucesso!",
-        description: "O download iniciará em instantes.",
+        description: `${activities.length} atividade(s) preparada(s) para impressão.`,
       });
-    }, 2000);
+    }, 500);
+  };
+
+  const handlePreview = () => {
+    const activities = handleGenerate();
+    if (!activities) return;
+    
+    setShowPreview(true);
+    toast({
+      title: "Visualização",
+      description: `Mostrando ${activities.length} atividade(s) gerada(s).`,
+    });
   };
 
   return (
@@ -276,7 +317,7 @@ const Index = () => {
 
                 <div className="space-y-2">
                   <Label>Formato de Impressão</Label>
-                  <RadioGroup defaultValue="colorido">
+                  <RadioGroup value={colorMode} onValueChange={(value) => setColorMode(value as 'colorido' | 'pb')}>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="colorido" id="colorido" />
                       <Label htmlFor="colorido">Colorido</Label>
@@ -327,7 +368,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 className="w-full"
-                onClick={() => toast({ title: "Visualização", description: "Abrindo prévia das atividades..." })}
+                onClick={handlePreview}
               >
                 <Printer className="mr-2 h-4 w-4" />
                 Visualizar Antes de Imprimir
@@ -336,6 +377,24 @@ const Index = () => {
           </div>
         </div>
       </main>
+
+      {/* Preview Dialog */}
+      <Dialog open={showPreview} onOpenChange={setShowPreview}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Pré-visualização das Atividades</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6">
+            {generatedActivities.length > 0 ? (
+              <ActivityGenerator activities={generatedActivities} studentName={studentName} />
+            ) : (
+              <p className="text-center text-muted-foreground py-8">
+                Nenhuma atividade para visualizar
+              </p>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
