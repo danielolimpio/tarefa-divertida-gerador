@@ -7,23 +7,34 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Reconhecer a Letra A',
+    title: 'Vogais - Letra A',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte todos os desenhos que começam com a letra A:',
-      items: ['🍎 Abelha', '🚗 Carro', '🦅 Águia', '🌳 Árvore', '⚓ Âncora']
+      instructions: 'Circule todas as letras A que encontrar nas palavras abaixo:',
+      words: [
+        { word: 'AVIÃO' },
+        { word: 'CASA' },
+        { word: 'ÁGUA' },
+        { word: 'MAMÃE' },
+        { word: 'PAPAI' }
+      ]
     }
   },
   {
     id: 'pt-mat-002',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Colorir a Vogal A',
+    title: 'Vogais - Letra E',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte a letra A com sua cor favorita:',
-      letters: ['A', 'A', 'A', 'A', 'A']
+      instructions: 'Complete as palavras com a letra E:',
+      words: [
+        { word: '_LEFANTE' },
+        { word: '_STRELA' },
+        { word: 'D_DO' },
+        { word: 'P_' }
+      ]
     }
   },
   {
@@ -31,11 +42,15 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Vogal E',
+    title: 'Vogais - Letra I',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule a letra E em cada palavra:',
-      words: ['ELEFANTE', 'ESTRELA', 'ESCOLA', 'ESPADA']
+      instructions: 'Escreva a letra I três vezes em cada linha:',
+      words: [
+        { word: '__ __ __' },
+        { word: '__ __ __' },
+        { word: '__ __ __' }
+      ]
     }
   },
   {
@@ -43,11 +58,16 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Vogal I',
+    title: 'Vogais - Letra O',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace a letra I pontilhada:',
-      items: ['I', 'I', 'I', 'I', 'I', 'I', 'I', 'I']
+      instructions: 'Quantas letras O existem em cada palavra? Escreva o número:',
+      words: [
+        { word: 'BOLO ___' },
+        { word: 'GATO ___' },
+        { word: 'OSSO ___' },
+        { word: 'OLHO ___' }
+      ]
     }
   },
   {
@@ -55,23 +75,34 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Vogal O',
+    title: 'Vogais - Letra U',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe objetos que começam com a letra O:',
-      prompts: ['Ovo', 'Olho', 'Ônibus', 'Ovelha']
+      instructions: 'Complete com a letra U:',
+      words: [
+        { word: '_VA' },
+        { word: 'AZ_L' },
+        { word: 'L_A' },
+        { word: '_NICÓRNIO' }
+      ]
     }
   },
   {
     id: 'pt-mat-006',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Vogal U',
+    title: 'Identificar Vogais',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte a letra U de azul:',
-      letters: ['U', 'U', 'U', 'U', 'U']
+      instructions: 'Escreva V (vogal) ou C (consoante) ao lado de cada letra:',
+      words: [
+        { word: 'A ___' },
+        { word: 'B ___' },
+        { word: 'E ___' },
+        { word: 'M ___' },
+        { word: 'I ___' }
+      ]
     }
   },
   {
@@ -79,16 +110,16 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Todas as Vogais',
+    title: 'Primeira Letra',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue as vogais iguais:',
-      pairs: [
-        { left: 'A', right: 'a' },
-        { left: 'E', right: 'e' },
-        { left: 'I', right: 'i' },
-        { left: 'O', right: 'o' },
-        { left: 'U', right: 'u' }
+      instructions: 'Escreva a primeira letra de cada palavra:',
+      words: [
+        { word: 'BOLA ___' },
+        { word: 'GATO ___' },
+        { word: 'PATO ___' },
+        { word: 'RATO ___' },
+        { word: 'FADA ___' }
       ]
     }
   },
@@ -97,11 +128,17 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Meu Nome',
+    title: 'Última Letra',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace as letras do seu nome (peça ajuda se necessário):',
-      items: ['_ _ _ _ _', '_ _ _ _ _', '_ _ _ _ _']
+      instructions: 'Escreva a última letra de cada palavra:',
+      words: [
+        { word: 'LIVRO ___' },
+        { word: 'SOL ___' },
+        { word: 'FLOR ___' },
+        { word: 'LUA ___' },
+        { word: 'CÉU ___' }
+      ]
     }
   },
   {
@@ -109,23 +146,34 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Sons Iniciais',
+    title: 'Contar Letras',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule os desenhos que começam com o mesmo som de BOLA:',
-      items: ['🍌 Banana', '🐱 Gato', '🦋 Borboleta', '🚲 Bicicleta', '🌺 Flor']
+      instructions: 'Conte quantas letras tem cada palavra e escreva o número:',
+      words: [
+        { word: 'BOI ___' },
+        { word: 'CASA ___' },
+        { word: 'PORTA ___' },
+        { word: 'JANELA ___' }
+      ]
     }
   },
   {
     id: 'pt-mat-010',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Alfabeto Ilustrado',
+    title: 'Palavras Simples',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte as primeiras 5 letras do alfabeto:',
-      letters: ['A', 'B', 'C', 'D', 'E']
+      instructions: 'Copie as palavras abaixo com letra legível:',
+      words: [
+        { word: 'PAI' },
+        { word: 'MÃE' },
+        { word: 'AVÔ' },
+        { word: 'AVÓ' },
+        { word: 'TIO' }
+      ]
     }
   }
 ];
@@ -137,14 +185,12 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Contar até 3',
+    title: 'Número 1',
     difficulty: 'facil',
     content: {
-      instructions: 'Conte os objetos e circule o número correto:',
-      items: [
-        { objects: '🍎🍎🍎', options: [1, 2, 3] },
-        { objects: '⭐⭐', options: [1, 2, 3] },
-        { objects: '🚗', options: [1, 2, 3] }
+      instructions: 'Escreva o número 1 cinco vezes:',
+      words: [
+        { word: '___ ___ ___ ___ ___' }
       ]
     }
   },
@@ -153,11 +199,13 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Número 1',
+    title: 'Número 2',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace o número 1:',
-      numbers: ['1', '1', '1', '1', '1', '1']
+      instructions: 'Escreva o número 2 cinco vezes:',
+      words: [
+        { word: '___ ___ ___ ___ ___' }
+      ]
     }
   },
   {
@@ -165,11 +213,13 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Número 2',
+    title: 'Número 3',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe 2 flores:',
-      prompts: ['Flor 1:', 'Flor 2:']
+      instructions: 'Escreva o número 3 cinco vezes:',
+      words: [
+        { word: '___ ___ ___ ___ ___' }
+      ]
     }
   },
   {
@@ -177,11 +227,14 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Número 3',
+    title: 'Contar de 1 a 5',
     difficulty: 'facil',
     content: {
-      instructions: 'Cole 3 adesivos ou desenhe 3 estrelas:',
-      spaces: ['⭐', '⭐', '⭐']
+      instructions: 'Complete a sequência numérica:',
+      words: [
+        { word: '1 - 2 - ___ - 4 - ___' },
+        { word: '1 - ___ - 3 - ___ - 5' }
+      ]
     }
   },
   {
@@ -189,11 +242,16 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Grande e Pequeno',
+    title: 'Maior ou Menor',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o objeto GRANDE de azul e o PEQUENO de vermelho:',
-      items: ['🐘 Grande', '🐭 Pequeno']
+      instructions: 'Circule o MAIOR número em cada linha:',
+      words: [
+        { word: '1    3' },
+        { word: '2    5' },
+        { word: '4    1' },
+        { word: '3    2' }
+      ]
     }
   },
   {
@@ -201,13 +259,15 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Mais e Menos',
+    title: 'Somas Simples',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule onde tem MAIS objetos:',
-      comparisons: [
-        { group1: '🍎🍎', group2: '🍎🍎🍎' },
-        { group1: '⭐⭐⭐', group2: '⭐' }
+      instructions: 'Resolva as continhas:',
+      problems: [
+        { problem: '1 + 1 = ___' },
+        { problem: '2 + 1 = ___' },
+        { problem: '1 + 2 = ___' },
+        { problem: '2 + 2 = ___' }
       ]
     }
   },
@@ -216,11 +276,16 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Formas: Círculo',
+    title: 'Antes e Depois',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte todos os CÍRCULOS:',
-      shapes: ['⭕', '⬛', '⭕', '🔺', '⭕']
+      instructions: 'Escreva o número que vem ANTES e DEPOIS:',
+      words: [
+        { word: '___ 2 ___' },
+        { word: '___ 3 ___' },
+        { word: '___ 4 ___' },
+        { word: '___ 5 ___' }
+      ]
     }
   },
   {
@@ -228,11 +293,16 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Formas: Quadrado',
+    title: 'Quantos Faltam?',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace o QUADRADO:',
-      shapes: ['⬛', '⬛', '⬛']
+      instructions: 'Complete para chegar ao número:',
+      words: [
+        { word: '2 + ___ = 3' },
+        { word: '1 + ___ = 4' },
+        { word: '3 + ___ = 5' },
+        { word: '2 + ___ = 4' }
+      ]
     }
   },
   {
@@ -240,11 +310,16 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Sequência Numérica',
+    title: 'Subtrações Simples',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue os números na ordem: 1 → 2 → 3',
-      sequence: ['1', '2', '3']
+      instructions: 'Resolva as continhas:',
+      problems: [
+        { problem: '2 - 1 = ___' },
+        { problem: '3 - 1 = ___' },
+        { problem: '4 - 2 = ___' },
+        { problem: '5 - 1 = ___' }
+      ]
     }
   },
   {
@@ -252,14 +327,13 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Quantos São?',
+    title: 'Ordem Crescente',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe a quantidade de objetos indicada:',
-      items: [
-        { number: 1, object: 'sol ☀️' },
-        { number: 2, object: 'árvores 🌳' },
-        { number: 3, object: 'flores 🌸' }
+      instructions: 'Coloque os números em ordem do menor para o maior:',
+      words: [
+        { word: '3 - 1 - 2    Ordem: ___ ___ ___' },
+        { word: '5 - 2 - 4    Ordem: ___ ___ ___' }
       ]
     }
   }
@@ -275,20 +349,30 @@ export const cienciasMaternal: Activity[] = [
     title: 'Partes do Corpo',
     difficulty: 'facil',
     content: {
-      instructions: 'Aponte e nomeie as partes do corpo:',
-      parts: ['👁️ Olhos', '👃 Nariz', '👂 Orelha', '👄 Boca', '🖐️ Mão']
+      instructions: 'Escreva o nome de 5 partes do corpo:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' },
+        { word: '4. _______________' },
+        { word: '5. _______________' }
+      ]
     }
   },
   {
     id: 'ci-mat-002',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'ciencias',
     grade: ['maternal'],
     title: 'Cinco Sentidos',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte os órgãos dos sentidos:',
-      items: ['👁️ Ver', '👂 Ouvir', '👃 Cheirar', '👅 Saborear', '🖐️ Tocar']
+      instructions: 'Complete com o sentido correto:',
+      words: [
+        { word: 'Os olhos servem para _______________' },
+        { word: 'As orelhas servem para _______________' },
+        { word: 'O nariz serve para _______________' }
+      ]
     }
   },
   {
@@ -299,8 +383,12 @@ export const cienciasMaternal: Activity[] = [
     title: 'Animais Domésticos',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule os animais que vivem em casa:',
-      animals: ['🐶 Cachorro', '🦁 Leão', '🐱 Gato', '🐘 Elefante', '🐠 Peixe']
+      instructions: 'Escreva o nome de 3 animais que vivem em casa:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -311,8 +399,13 @@ export const cienciasMaternal: Activity[] = [
     title: 'Animais da Fazenda',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte os animais da fazenda:',
-      animals: ['🐄 Vaca', '🐷 Porco', '🐔 Galinha', '🐴 Cavalo']
+      instructions: 'Escreva V (verdadeiro) ou F (falso):',
+      words: [
+        { word: 'A vaca vive na fazenda ___' },
+        { word: 'O leão vive na fazenda ___' },
+        { word: 'A galinha vive na fazenda ___' },
+        { word: 'O tubarão vive na fazenda ___' }
+      ]
     }
   },
   {
@@ -320,11 +413,15 @@ export const cienciasMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ciencias',
     grade: ['maternal'],
-    title: 'Plantas',
+    title: 'Partes das Plantas',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe uma planta com: raiz, caule, folhas e flor',
-      parts: ['Raiz', 'Caule', 'Folhas', 'Flor']
+      instructions: 'Escreva o nome de 3 partes de uma planta:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -335,8 +432,12 @@ export const cienciasMaternal: Activity[] = [
     title: 'Dia e Noite',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o SOL de amarelo e a LUA de cinza:',
-      items: ['☀️ Dia', '🌙 Noite']
+      instructions: 'Complete as frases:',
+      words: [
+        { word: 'De dia vemos o _______________ (SOL/LUA)' },
+        { word: 'De noite vemos a _______________ (SOL/LUA)' },
+        { word: 'Dormimos à _______________ (NOITE/MANHÃ)' }
+      ]
     }
   },
   {
@@ -344,14 +445,14 @@ export const cienciasMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ciencias',
     grade: ['maternal'],
-    title: 'Clima',
+    title: 'O Tempo',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue o clima ao desenho correto:',
-      pairs: [
-        { weather: '☀️ Sol', item: 'Óculos' },
-        { weather: '☔ Chuva', item: 'Guarda-chuva' },
-        { weather: '❄️ Frio', item: 'Casaco' }
+      instructions: 'Ligue corretamente:',
+      words: [
+        { word: 'Quando chove usamos _______________' },
+        { word: 'Quando está sol usamos _______________' },
+        { word: 'Quando está frio usamos _______________' }
       ]
     }
   },
@@ -363,8 +464,13 @@ export const cienciasMaternal: Activity[] = [
     title: 'Frutas',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte as frutas que você conhece:',
-      fruits: ['🍎 Maçã', '🍌 Banana', '🍊 Laranja', '🍇 Uva']
+      instructions: 'Escreva o nome de 4 frutas que você conhece:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' },
+        { word: '4. _______________' }
+      ]
     }
   },
   {
@@ -372,11 +478,16 @@ export const cienciasMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ciencias',
     grade: ['maternal'],
-    title: 'Água',
+    title: 'A Água',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule onde encontramos água:',
-      items: ['💧 Torneira', '🌊 Rio', '☔ Chuva', '🏔️ Montanha']
+      instructions: 'Complete com SIM ou NÃO:',
+      words: [
+        { word: 'A água é importante? ___' },
+        { word: 'Podemos viver sem água? ___' },
+        { word: 'Devemos economizar água? ___' },
+        { word: 'A água suja é boa para beber? ___' }
+      ]
     }
   },
   {
@@ -384,11 +495,15 @@ export const cienciasMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ciencias',
     grade: ['maternal'],
-    title: 'Higiene',
+    title: 'Higiene Pessoal',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe objetos de higiene pessoal:',
-      items: ['Sabonete', 'Escova de dentes', 'Toalha']
+      instructions: 'Escreva 3 hábitos de higiene:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   }
 ];
@@ -403,8 +518,12 @@ export const historiaMaternal: Activity[] = [
     title: 'Minha Família',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe sua família:',
-      prompts: ['Mamãe', 'Papai', 'Irmão(ã)', 'Você']
+      instructions: 'Escreva o nome de 3 pessoas da sua família:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -415,8 +534,12 @@ export const historiaMaternal: Activity[] = [
     title: 'Minha Casa',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe sua casa:',
-      elements: ['Porta', 'Janelas', 'Telhado']
+      instructions: 'Escreva 3 cômodos da sua casa:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -424,11 +547,15 @@ export const historiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'historia',
     grade: ['maternal'],
-    title: 'Ontem e Hoje',
+    title: 'Hoje e Ontem',
     difficulty: 'facil',
     content: {
-      instructions: 'O que você fez ontem? Desenhe:',
-      prompts: ['Manhã:', 'Tarde:', 'Noite:']
+      instructions: 'Complete as frases:',
+      words: [
+        { word: 'Hoje é dia _______________' },
+        { word: 'Ontem foi dia _______________' },
+        { word: 'Amanhã será dia _______________' }
+      ]
     }
   },
   {
@@ -436,11 +563,16 @@ export const historiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'historia',
     grade: ['maternal'],
-    title: 'Eu Cresci',
+    title: 'Quando Eu Era Bebê',
     difficulty: 'facil',
     content: {
-      instructions: 'Cole uma foto de quando você era bebê e desenhe você agora:',
-      spaces: ['Bebê:', 'Agora:']
+      instructions: 'Complete com SIM ou NÃO:',
+      words: [
+        { word: 'Quando eu era bebê, eu andava? ___' },
+        { word: 'Quando eu era bebê, eu falava? ___' },
+        { word: 'Agora eu sei andar? ___' },
+        { word: 'Agora eu sei falar? ___' }
+      ]
     }
   },
   {
@@ -451,11 +583,11 @@ export const historiaMaternal: Activity[] = [
     title: 'Profissões',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue cada profissional ao seu objeto de trabalho:',
-      pairs: [
-        { person: '👨‍⚕️ Médico', tool: '💊 Remédio' },
-        { person: '👨‍🍳 Cozinheiro', tool: '🍳 Panela' },
-        { person: '👨‍🏫 Professor', tool: '📚 Livro' }
+      instructions: 'Escreva o nome de 3 profissões:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
       ]
     }
   },
@@ -467,8 +599,12 @@ export const historiaMaternal: Activity[] = [
     title: 'Dias da Semana',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o dia de hoje:',
-      days: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+      instructions: 'Complete os dias da semana:',
+      words: [
+        { word: 'Domingo - _______________ - Terça' },
+        { word: 'Quarta - _______________ - Sexta' },
+        { word: 'Sábado - _______________' }
+      ]
     }
   },
   {
@@ -476,11 +612,16 @@ export const historiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'historia',
     grade: ['maternal'],
-    title: 'Meios de Transporte Antigos',
+    title: 'Meios de Transporte',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule como as pessoas viajavam antigamente:',
-      items: ['🐴 Cavalo', '🚂 Trem', '🚗 Carro', '⛵ Barco']
+      instructions: 'Escreva 4 meios de transporte:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' },
+        { word: '4. _______________' }
+      ]
     }
   },
   {
@@ -488,11 +629,15 @@ export const historiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'historia',
     grade: ['maternal'],
-    title: 'Festas Tradicionais',
+    title: 'Festas',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe sua festa favorita:',
-      options: ['Aniversário 🎂', 'Natal 🎄', 'Páscoa 🐰']
+      instructions: 'Escreva o nome de 3 festas que você conhece:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -503,8 +648,11 @@ export const historiaMaternal: Activity[] = [
     title: 'Minha Escola',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe sua sala de aula:',
-      items: ['Mesa do professor', 'Carteiras', 'Quadro']
+      instructions: 'Responda:',
+      words: [
+        { word: 'Qual o nome da sua escola? _______________' },
+        { word: 'Qual o nome da sua professora? _______________' }
+      ]
     }
   },
   {
@@ -512,11 +660,15 @@ export const historiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'historia',
     grade: ['maternal'],
-    title: 'Brinquedos de Ontem',
+    title: 'Brinquedos',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte os brinquedos:',
-      toys: ['🪀 Pião', '🪁 Pipa', '🎱 Bola', '🧸 Urso']
+      instructions: 'Escreva o nome de 3 brinquedos que você gosta:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   }
 ];
@@ -531,8 +683,12 @@ export const geografiaMaternal: Activity[] = [
     title: 'Dentro e Fora',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe uma bola DENTRO da caixa e outra FORA:',
-      spaces: ['Dentro:', 'Fora:']
+      instructions: 'Complete com DENTRO ou FORA:',
+      words: [
+        { word: 'O livro está _______________ da mochila' },
+        { word: 'O pássaro está _______________ do ninho' },
+        { word: 'A roupa está _______________ do armário' }
+      ]
     }
   },
   {
@@ -543,8 +699,12 @@ export const geografiaMaternal: Activity[] = [
     title: 'Em Cima e Embaixo',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o pássaro que está EM CIMA da árvore:',
-      items: ['🐦 Em cima', '🌳 Árvore', '🐛 Embaixo']
+      instructions: 'Complete com EM CIMA ou EMBAIXO:',
+      words: [
+        { word: 'O teto fica _______________ da casa' },
+        { word: 'O chão fica _______________ da casa' },
+        { word: 'O avião voa _______________ das nuvens' }
+      ]
     }
   },
   {
@@ -555,8 +715,12 @@ export const geografiaMaternal: Activity[] = [
     title: 'Perto e Longe',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule o que está PERTO de você agora:',
-      items: ['Lápis', 'Borracha', 'Caderno', 'Mochila']
+      instructions: 'Escreva PERTO ou LONGE:',
+      words: [
+        { word: 'Minha casa fica _______________ da escola' },
+        { word: 'A praia fica _______________ da minha casa' },
+        { word: 'Meu amigo senta _______________ de mim' }
+      ]
     }
   },
   {
@@ -564,11 +728,15 @@ export const geografiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'geografia',
     grade: ['maternal'],
-    title: 'Meu Caminho',
+    title: 'Lugares',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe o caminho da sua casa até a escola:',
-      elements: ['🏠 Casa', '➡️ Caminho', '🏫 Escola']
+      instructions: 'Escreva o nome de 3 lugares da sua cidade:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -576,11 +744,16 @@ export const geografiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'geografia',
     grade: ['maternal'],
-    title: 'Lugares da Cidade',
+    title: 'Cidade e Campo',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte os lugares que você conhece:',
-      places: ['🏫 Escola', '🏪 Mercado', '🏥 Hospital', '⛪ Igreja']
+      instructions: 'Escreva C (cidade) ou F (campo):',
+      words: [
+        { word: 'Plantação ___' },
+        { word: 'Prédios ___' },
+        { word: 'Vacas ___' },
+        { word: 'Carros ___' }
+      ]
     }
   },
   {
@@ -588,11 +761,16 @@ export const geografiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'geografia',
     grade: ['maternal'],
-    title: 'Campo e Cidade',
+    title: 'Elementos da Natureza',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule o que você vê na CIDADE:',
-      items: ['🏢 Prédios', '🐄 Vacas', '🚗 Carros', '🌾 Plantação']
+      instructions: 'Escreva o nome de 4 elementos da natureza:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' },
+        { word: '4. _______________' }
+      ]
     }
   },
   {
@@ -600,11 +778,16 @@ export const geografiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'geografia',
     grade: ['maternal'],
-    title: 'Elementos da Natureza',
+    title: 'Onde Tem Água?',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe elementos da natureza:',
-      items: ['Sol ☀️', 'Nuvem ☁️', 'Chuva 🌧️', 'Arco-íris 🌈']
+      instructions: 'Escreva SIM ou NÃO:',
+      words: [
+        { word: 'Tem água no rio? ___' },
+        { word: 'Tem água na árvore? ___' },
+        { word: 'Tem água no mar? ___' },
+        { word: 'Tem água na pedra? ___' }
+      ]
     }
   },
   {
@@ -612,11 +795,14 @@ export const geografiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'geografia',
     grade: ['maternal'],
-    title: 'Água na Natureza',
+    title: 'Minha Rua',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte onde encontramos água:',
-      items: ['🌊 Mar', '🏞️ Rio', '💧 Chuva', '⛲ Fonte']
+      instructions: 'Responda:',
+      words: [
+        { word: 'Qual o nome da sua rua? _______________' },
+        { word: 'Tem árvores na sua rua? _______________' }
+      ]
     }
   },
   {
@@ -624,11 +810,14 @@ export const geografiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'geografia',
     grade: ['maternal'],
-    title: 'Minha Rua',
+    title: 'Direções',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe sua rua com casas e árvores:',
-      elements: ['Casas', 'Árvores', 'Rua']
+      instructions: 'Complete:',
+      words: [
+        { word: 'Para ir para frente, vou para _______________ (FRENTE/TRÁS)' },
+        { word: 'Para voltar, vou para _______________ (FRENTE/TRÁS)' }
+      ]
     }
   },
   {
@@ -636,11 +825,15 @@ export const geografiaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'geografia',
     grade: ['maternal'],
-    title: 'Cores da Natureza',
+    title: 'Meu Endereço',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte cada elemento com sua cor natural:',
-      items: ['🌳 Verde (árvore)', '☀️ Amarelo (sol)', '🌊 Azul (mar)']
+      instructions: 'Com ajuda, escreva seu endereço:',
+      words: [
+        { word: 'Rua: _______________' },
+        { word: 'Número: _______________' },
+        { word: 'Cidade: _______________' }
+      ]
     }
   }
 ];
@@ -652,11 +845,15 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Colors - Red',
+    title: 'Colors - RED',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte de vermelho (RED):',
-      items: ['🍎 Apple', '❤️ Heart', '🌹 Rose']
+      instructions: 'Copie a palavra RED três vezes:',
+      words: [
+        { word: 'R E D  _______________' },
+        { word: 'R E D  _______________' },
+        { word: 'R E D  _______________' }
+      ]
     }
   },
   {
@@ -664,11 +861,15 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Colors - Blue',
+    title: 'Colors - BLUE',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte de azul (BLUE):',
-      items: ['🌊 Sea', '🦋 Butterfly', '☁️ Sky']
+      instructions: 'Copie a palavra BLUE três vezes:',
+      words: [
+        { word: 'B L U E  _______________' },
+        { word: 'B L U E  _______________' },
+        { word: 'B L U E  _______________' }
+      ]
     }
   },
   {
@@ -676,11 +877,15 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Colors - Yellow',
+    title: 'Colors - YELLOW',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte de amarelo (YELLOW):',
-      items: ['☀️ Sun', '🍌 Banana', '⭐ Star']
+      instructions: 'Copie a palavra YELLOW três vezes:',
+      words: [
+        { word: 'Y E L L O W  _______________' },
+        { word: 'Y E L L O W  _______________' },
+        { word: 'Y E L L O W  _______________' }
+      ]
     }
   },
   {
@@ -688,11 +893,13 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Numbers - One',
+    title: 'Numbers - ONE',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace o número ONE (1):',
-      numbers: ['1', '1', '1']
+      instructions: 'Escreva a palavra ONE cinco vezes:',
+      words: [
+        { word: '___  ___  ___  ___  ___' }
+      ]
     }
   },
   {
@@ -700,11 +907,13 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Numbers - Two',
+    title: 'Numbers - TWO',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe TWO (2) objetos:',
-      items: ['Object 1:', 'Object 2:']
+      instructions: 'Escreva a palavra TWO cinco vezes:',
+      words: [
+        { word: '___  ___  ___  ___  ___' }
+      ]
     }
   },
   {
@@ -712,12 +921,15 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Animals - Dog',
+    title: 'Animals - DOG',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o cachorro e escreva DOG:',
-      word: 'D O G',
-      image: '🐶'
+      instructions: 'Complete as letras da palavra DOG:',
+      words: [
+        { word: 'D ___  G' },
+        { word: '___ O G' },
+        { word: 'D O ___' }
+      ]
     }
   },
   {
@@ -725,12 +937,15 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Animals - Cat',
+    title: 'Animals - CAT',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o gato e escreva CAT:',
-      word: 'C A T',
-      image: '🐱'
+      instructions: 'Complete as letras da palavra CAT:',
+      words: [
+        { word: 'C ___  T' },
+        { word: '___ A T' },
+        { word: 'C A ___' }
+      ]
     }
   },
   {
@@ -738,13 +953,13 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Hello and Goodbye',
+    title: 'Greetings - HELLO',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue as palavras às figuras:',
-      pairs: [
-        { word: 'HELLO', action: '👋 Acenar (olá)' },
-        { word: 'GOODBYE', action: '👋 Acenar (tchau)' }
+      instructions: 'Copie a palavra HELLO:',
+      words: [
+        { word: 'H E L L O  _______________' },
+        { word: 'H E L L O  _______________' }
       ]
     }
   },
@@ -753,23 +968,28 @@ export const inglesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Family - Mom and Dad',
+    title: 'Greetings - GOODBYE',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe sua MOM (mamãe) e seu DAD (papai):',
-      spaces: ['MOM:', 'DAD:']
+      instructions: 'Copie a palavra GOODBYE:',
+      words: [
+        { word: 'G O O D B Y E  _______________' }
+      ]
     }
   },
   {
     id: 'in-mat-010',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'ingles',
     grade: ['maternal'],
-    title: 'Rainbow Colors',
+    title: 'Family - MOM and DAD',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o arco-íris (RAINBOW):',
-      colors: ['RED', 'ORANGE', 'YELLOW', 'GREEN', 'BLUE', 'PURPLE']
+      instructions: 'Copie as palavras:',
+      words: [
+        { word: 'M O M  _______________' },
+        { word: 'D A D  _______________' }
+      ]
     }
   }
 ];
@@ -778,26 +998,34 @@ export const inglesMaternal: Activity[] = [
 export const artesMaternal: Activity[] = [
   {
     id: 'ar-mat-001',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Desenho Livre',
+    title: 'Cores Primárias',
     difficulty: 'facil',
     content: {
-      instructions: 'Faça um desenho livre do que você mais gosta:',
-      space: 'Grande área para desenho livre'
+      instructions: 'Escreva o nome das 3 cores primárias:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
     id: 'ar-mat-002',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Pintura com Dedos',
+    title: 'Círculo',
     difficulty: 'facil',
     content: {
-      instructions: 'Use seus dedos para pintar bolinhas coloridas:',
-      technique: 'Pintura digital'
+      instructions: 'Trace 3 círculos grandes no espaço abaixo:',
+      words: [
+        { word: 'Círculo 1: _______________' },
+        { word: 'Círculo 2: _______________' },
+        { word: 'Círculo 3: _______________' }
+      ]
     }
   },
   {
@@ -805,23 +1033,30 @@ export const artesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Colagem',
+    title: 'Formas Geométricas',
     difficulty: 'facil',
     content: {
-      instructions: 'Cole papéis coloridos para fazer uma árvore:',
-      materials: ['Papel marrom (tronco)', 'Papel verde (folhas)']
+      instructions: 'Escreva o nome de 3 formas geométricas:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
     id: 'ar-mat-004',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Círculos Coloridos',
+    title: 'Linha Reta e Curva',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte cada círculo de uma cor diferente:',
-      circles: ['⭕', '⭕', '⭕', '⭕', '⭕']
+      instructions: 'Desenhe 3 linhas retas e 3 linhas curvas',
+      words: [
+        { word: 'Linhas retas: _______________' },
+        { word: 'Linhas curvas: _______________' }
+      ]
     }
   },
   {
@@ -829,23 +1064,29 @@ export const artesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Minha Mão',
+    title: 'Meu Desenho Favorito',
     difficulty: 'facil',
     content: {
-      instructions: 'Contorne sua mão e decore:',
-      activity: 'Traçar mão e decorar'
+      instructions: 'O que você mais gosta de desenhar? Escreva:',
+      words: [
+        { word: 'Eu gosto de desenhar: _______________' }
+      ]
     }
   },
   {
     id: 'ar-mat-006',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Sol e Nuvens',
+    title: 'Materiais de Arte',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe e pinte um sol amarelo e nuvens brancas:',
-      elements: ['☀️ Sol', '☁️ Nuvens']
+      instructions: 'Escreva o nome de 3 materiais usados para desenhar:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -853,23 +1094,30 @@ export const artesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Carimbo de Batata',
+    title: 'Grande e Pequeno',
     difficulty: 'facil',
     content: {
-      instructions: 'Use carimbos para fazer desenhos (pode ser com esponja):',
-      technique: 'Carimbos'
+      instructions: 'Desenhe um círculo GRANDE e um círculo PEQUENO',
+      words: [
+        { word: 'Círculo GRANDE: _______________' },
+        { word: 'Círculo PEQUENO: _______________' }
+      ]
     }
   },
   {
     id: 'ar-mat-008',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Borboleta Simétrica',
+    title: 'Quadrado',
     difficulty: 'facil',
     content: {
-      instructions: 'Dobre o papel e pinte uma asa da borboleta, depois desdobre:',
-      technique: 'Pintura simétrica'
+      instructions: 'Trace 3 quadrados no espaço abaixo:',
+      words: [
+        { word: 'Quadrado 1: _______________' },
+        { word: 'Quadrado 2: _______________' },
+        { word: 'Quadrado 3: _______________' }
+      ]
     }
   },
   {
@@ -877,23 +1125,30 @@ export const artesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Massinha de Modelar',
+    title: 'Triângulo',
     difficulty: 'facil',
     content: {
-      instructions: 'Faça bolinhas e cobrinhas com massinha:',
-      shapes: ['Bolinhas', 'Cobrinhas']
+      instructions: 'Trace 3 triângulos no espaço abaixo:',
+      words: [
+        { word: 'Triângulo 1: _______________' },
+        { word: 'Triângulo 2: _______________' },
+        { word: 'Triângulo 3: _______________' }
+      ]
     }
   },
   {
     id: 'ar-mat-010',
-    type: 'colorir',
+    type: 'exercicios',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Casa Colorida',
+    title: 'Minha Cor Favorita',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe e pinte uma casa bem colorida:',
-      parts: ['Telhado', 'Paredes', 'Porta', 'Janelas']
+      instructions: 'Responda:',
+      words: [
+        { word: 'Minha cor favorita é: _______________' },
+        { word: 'Por quê? _______________' }
+      ]
     }
   }
 ];
@@ -905,11 +1160,15 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Andar e Correr',
+    title: 'Movimentos do Corpo',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe você andando e correndo:',
-      actions: ['Andando', 'Correndo']
+      instructions: 'Escreva 3 movimentos que você pode fazer com o corpo:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
+      ]
     }
   },
   {
@@ -917,11 +1176,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Pular com os Dois Pés',
+    title: 'Pular',
     difficulty: 'facil',
     content: {
-      instructions: 'Faça 5 pulos e peça para alguém desenhar bolinhas para cada pulo:',
-      count: ['1', '2', '3', '4', '5']
+      instructions: 'Complete:',
+      words: [
+        { word: 'Eu consigo pular com _______________ pés (um/dois)' },
+        { word: 'Pular é _______________ (fácil/difícil)' }
+      ]
     }
   },
   {
@@ -929,11 +1191,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Jogar e Pegar Bola',
+    title: 'Esportes',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe uma bola e circule: você consegue jogá-la para cima e pegar?',
-      options: ['SIM 😊', 'NÃO ☹️']
+      instructions: 'Escreva o nome de 2 esportes que você conhece:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' }
+      ]
     }
   },
   {
@@ -941,11 +1206,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Equilíbrio',
+    title: 'Andar e Correr',
     difficulty: 'facil',
     content: {
-      instructions: 'Fique em um pé só. Por quantos segundos você consegue?',
-      time: ['1-5 segundos', '5-10 segundos', 'Mais de 10']
+      instructions: 'Complete com V (verdadeiro) ou F (falso):',
+      words: [
+        { word: 'Correr é mais rápido que andar ___' },
+        { word: 'Andar é mais rápido que correr ___' }
+      ]
     }
   },
   {
@@ -953,14 +1221,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Movimentos do Corpo',
+    title: 'Bola',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue o movimento à parte do corpo:',
-      pairs: [
-        { movement: 'Bater palmas', part: '🖐️ Mãos' },
-        { movement: 'Caminhar', part: '🦵 Pés' },
-        { movement: 'Acenar', part: '🖐️ Braço' }
+      instructions: 'O que podemos fazer com uma bola? Escreva 3 ações:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
       ]
     }
   },
@@ -969,11 +1237,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Dança',
+    title: 'Equilíbrio',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe você dançando sua música favorita:',
-      activity: 'Desenho de dança'
+      instructions: 'Complete:',
+      words: [
+        { word: 'Eu consigo ficar em um pé só? _______________' },
+        { word: 'Quantos segundos? _______________' }
+      ]
     }
   },
   {
@@ -981,15 +1252,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Circuito Motor',
+    title: 'Brincadeiras',
     difficulty: 'facil',
     content: {
-      instructions: 'Marque com X as atividades que você consegue fazer:',
-      activities: [
-        '⬜ Pular corda',
-        '⬜ Chutar bola',
-        '⬜ Correr',
-        '⬜ Rastejar'
+      instructions: 'Escreva o nome de 3 brincadeiras que você gosta:',
+      words: [
+        { word: '1. _______________' },
+        { word: '2. _______________' },
+        { word: '3. _______________' }
       ]
     }
   },
@@ -998,11 +1268,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Alongamento',
+    title: 'Alongar',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule as partes do corpo que você alongou hoje:',
-      parts: ['Braços', 'Pernas', 'Pescoço', 'Costas']
+      instructions: 'Escreva SIM ou NÃO:',
+      words: [
+        { word: 'É importante alongar antes de brincar? ___' },
+        { word: 'Alongar ajuda nosso corpo? ___' }
+      ]
     }
   },
   {
@@ -1010,11 +1283,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Brincadeiras ao Ar Livre',
+    title: 'Rápido e Devagar',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe sua brincadeira favorita no parque:',
-      options: ['Balanço', 'Escorregador', 'Gangorra', 'Casinha']
+      instructions: 'Complete com RÁPIDO ou DEVAGAR:',
+      words: [
+        { word: 'Um carro é _______________ (rápido/devagar)' },
+        { word: 'Uma tartaruga é _______________ (rápida/devagar)' }
+      ]
     }
   },
   {
@@ -1022,11 +1298,14 @@ export const educacaoFisicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'ed-fisica',
     grade: ['maternal'],
-    title: 'Esportes com Bola',
+    title: 'Atividade Física',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte as bolas de esportes diferentes:',
-      balls: ['⚽ Futebol', '🏀 Basquete', '🎾 Tênis']
+      instructions: 'Responda:',
+      words: [
+        { word: 'Você gosta de se exercitar? _______________' },
+        { word: 'Qual sua atividade favorita? _______________' }
+      ]
     }
   }
 ];
@@ -1035,15 +1314,16 @@ export const educacaoFisicaMaternal: Activity[] = [
 export const logicaMaternal: Activity[] = [
   {
     id: 'lo-mat-001',
-    type: 'sequencias',
+    type: 'exercicios',
     subject: 'logica',
     grade: ['maternal'],
-    title: 'Padrão Simples',
+    title: 'Sequências',
     difficulty: 'facil',
     content: {
-      instructions: 'Continue o padrão:',
-      sequences: [
-        { pattern: ['🔴', '🔵', '🔴', '🔵', '?'], answer: '🔴' }
+      instructions: 'Complete a sequência: 1, 2, ___',
+      words: [
+        { word: '1, 2, ___' },
+        { word: 'A, B, ___' }
       ]
     }
   },
@@ -1055,8 +1335,11 @@ export const logicaMaternal: Activity[] = [
     title: 'Igual e Diferente',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule o que é diferente:',
-      items: ['🍎', '🍎', '🍌', '🍎']
+      instructions: 'Qual palavra é diferente? Circule:',
+      words: [
+        { word: 'BOLA - BOLA - CASA - BOLA' },
+        { word: 'GATO - RATO - GATO - GATO' }
+      ]
     }
   },
   {
@@ -1067,8 +1350,11 @@ export const logicaMaternal: Activity[] = [
     title: 'Maior e Menor',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte o maior:',
-      items: ['🐘 Grande', '🐭 Pequeno']
+      instructions: 'Circule a palavra MAIOR em cada linha:',
+      words: [
+        { word: 'ELEFANTE     RATO' },
+        { word: 'FORMIGA      CACHORRO' }
+      ]
     }
   },
   {
@@ -1076,11 +1362,14 @@ export const logicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'logica',
     grade: ['maternal'],
-    title: 'O Que Vem Primeiro?',
+    title: 'Ordem Lógica',
     difficulty: 'facil',
     content: {
-      instructions: 'Numere a ordem: 1, 2, 3',
-      sequence: ['🥚 Ovo', '🐣 Pintinho', '🐔 Galinha']
+      instructions: 'Numere a ordem correta (1, 2, 3):',
+      words: [
+        { word: '___ Plantar ___ Colher ___ Comer' },
+        { word: '___ Acordar ___ Almoçar ___ Dormir' }
+      ]
     }
   },
   {
@@ -1088,14 +1377,13 @@ export const logicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'logica',
     grade: ['maternal'],
-    title: 'Agrupar Iguais',
+    title: 'Agrupar',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue os objetos iguais:',
-      pairs: [
-        { item1: '🍎', item2: '🍎' },
-        { item1: '⭐', item2: '⭐' },
-        { item1: '🚗', item2: '🚗' }
+      instructions: 'Agrupe os animais. Escreva quantos tem de cada:',
+      words: [
+        { word: 'GATO GATO CACHORRO GATO' },
+        { word: 'Gatos: ___  Cachorros: ___' }
       ]
     }
   },
@@ -1107,8 +1395,12 @@ export const logicaMaternal: Activity[] = [
     title: 'O Que Falta?',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe o que está faltando:',
-      items: ['👁️ Olho', '?', '👁️ Olho']
+      instructions: 'Complete com a letra que falta:',
+      words: [
+        { word: 'A, B, ___, D' },
+        { word: '___, E, F, G' },
+        { word: 'M, ___, O, P' }
+      ]
     }
   },
   {
@@ -1116,11 +1408,16 @@ export const logicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'logica',
     grade: ['maternal'],
-    title: 'Cores e Formas',
+    title: 'Classificar',
     difficulty: 'facil',
     content: {
-      instructions: 'Pinte todos os círculos de vermelho:',
-      shapes: ['⭕', '⬛', '⭕', '🔺']
+      instructions: 'Escreva F (fruta) ou A (animal):',
+      words: [
+        { word: 'Maçã ___' },
+        { word: 'Gato ___' },
+        { word: 'Banana ___' },
+        { word: 'Cachorro ___' }
+      ]
     }
   },
   {
@@ -1128,13 +1425,14 @@ export const logicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'logica',
     grade: ['maternal'],
-    title: 'Encaixar Peças',
+    title: 'Relações',
     difficulty: 'facil',
     content: {
-      instructions: 'Ligue cada forma ao seu espaço:',
-      pairs: [
-        { shape: '⭕ Círculo', space: '⭕ Buraco círculo' },
-        { shape: '⬛ Quadrado', space: '⬛ Buraco quadrado' }
+      instructions: 'Complete:',
+      words: [
+        { word: 'A mãe da galinha é a _______________' },
+        { word: 'O filho do cachorro é o _______________' },
+        { word: 'A casa do pássaro é o _______________' }
       ]
     }
   },
@@ -1143,23 +1441,30 @@ export const logicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'logica',
     grade: ['maternal'],
-    title: 'Completar Desenho',
+    title: 'Antes e Depois',
     difficulty: 'facil',
     content: {
-      instructions: 'Complete o desenho da casa que está pela metade:',
-      activity: 'Completar metade do desenho'
+      instructions: 'O que vem antes? Complete:',
+      words: [
+        { word: 'Antes de dormir, eu _______________' },
+        { word: 'Antes de comer, eu _______________' }
+      ]
     }
   },
   {
     id: 'lo-mat-010',
-    type: 'sequencias',
+    type: 'exercicios',
     subject: 'logica',
     grade: ['maternal'],
-    title: 'Sequência de Tamanhos',
+    title: 'Comparações',
     difficulty: 'facil',
     content: {
-      instructions: 'Ordene do menor para o maior:',
-      items: ['Pequeno', 'Médio', 'Grande']
+      instructions: 'Complete com MAIS ou MENOS:',
+      words: [
+        { word: '5 é _______________ que 3' },
+        { word: '1 é _______________ que 4' },
+        { word: '2 é _______________ que 2' }
+      ]
     }
   }
 ];
@@ -1171,14 +1476,13 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Jogo da Memória - Frutas',
+    title: 'Lembrar Palavras',
     difficulty: 'facil',
     content: {
-      instructions: 'Encontre os pares de frutas iguais:',
-      pairs: [
-        { item: '🍎', pair: '🍎' },
-        { item: '🍌', pair: '🍌' },
-        { item: '🍊', pair: '🍊' }
+      instructions: 'Leia estas 3 palavras e depois escreva sem olhar:',
+      words: [
+        { word: 'SOL - LUA - CÉU' },
+        { word: 'Agora escreva: ___ - ___ - ___' }
       ]
     }
   },
@@ -1187,11 +1491,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'O Que Tinha?',
+    title: 'Números de Memória',
     difficulty: 'facil',
     content: {
-      instructions: 'Olhe bem: 🍎 🚗 ⭐. Agora cubra e desenhe o que lembra:',
-      items: ['Item 1:', 'Item 2:', 'Item 3:']
+      instructions: 'Olhe estes números por 10 segundos e depois escreva:',
+      words: [
+        { word: '1 - 2 - 3' },
+        { word: 'Escreva: ___ - ___ - ___' }
+      ]
     }
   },
   {
@@ -1199,11 +1506,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Repetir Sons',
+    title: 'Cores de Memória',
     difficulty: 'facil',
     content: {
-      instructions: 'Peça para alguém bater palmas: 👏👏. Repita!',
-      sequence: 'Sequência de 2 palmas'
+      instructions: 'Memorize estas 3 cores e escreva:',
+      words: [
+        { word: 'AZUL - VERDE - AMARELO' },
+        { word: 'Escreva: ___ - ___ - ___' }
+      ]
     }
   },
   {
@@ -1211,11 +1521,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Cores da Sequência',
+    title: 'Sequência de Letras',
     difficulty: 'facil',
     content: {
-      instructions: 'Olhe as cores: 🔴 🔵. Cubra e pinte na ordem:',
-      spaces: ['□', '□']
+      instructions: 'Olhe as letras e depois escreva de memória:',
+      words: [
+        { word: 'A - B - C' },
+        { word: 'Escreva: ___ - ___ - ___' }
+      ]
     }
   },
   {
@@ -1223,11 +1536,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Onde Está?',
+    title: 'Lembrar Objetos',
     difficulty: 'facil',
     content: {
-      instructions: 'Um brinquedo está escondido. Você lembra onde colocou?',
-      options: ['⬜ Debaixo da mesa', '⬜ Na caixa', '⬜ No armário']
+      instructions: 'Memorize estes 3 objetos e escreva:',
+      words: [
+        { word: 'BOLA - LIVRO - LÁPIS' },
+        { word: 'Escreva: ___ - ___ - ___' }
+      ]
     }
   },
   {
@@ -1235,11 +1551,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Números em Ordem',
+    title: 'Meu Nome',
     difficulty: 'facil',
     content: {
-      instructions: 'Olhe: 1, 2, 3. Cubra e escreva:',
-      spaces: ['_', '_', '_']
+      instructions: 'Escreva seu nome completo de memória:',
+      words: [
+        { word: 'Nome: _______________' },
+        { word: 'Sobrenome: _______________' }
+      ]
     }
   },
   {
@@ -1247,11 +1566,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Animais que Vi',
+    title: 'Animais de Memória',
     difficulty: 'facil',
     content: {
-      instructions: 'Observe: 🐶 🐱 🐰. Cubra. Quantos animais eram?',
-      options: ['1', '2', '3', '4']
+      instructions: 'Olhe estes animais e depois escreva:',
+      words: [
+        { word: 'GATO - CACHORRO - PÁSSARO' },
+        { word: 'Escreva: ___ - ___ - ___' }
+      ]
     }
   },
   {
@@ -1259,11 +1581,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'História em Sequência',
+    title: 'Ordem de Palavras',
     difficulty: 'facil',
     content: {
-      instructions: 'Veja a ordem: 1️⃣ Acordar 2️⃣ Comer 3️⃣ Brincar. Repita!',
-      sequence: ['1', '2', '3']
+      instructions: 'Memorize a ordem e escreva:',
+      words: [
+        { word: '1º PAI  2º MÃE  3º FILHO' },
+        { word: '1º ___  2º ___  3º ___' }
+      ]
     }
   },
   {
@@ -1271,11 +1596,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Qual Sumiu?',
+    title: 'Números do Telefone',
     difficulty: 'facil',
     content: {
-      instructions: 'Tinha 3 objetos: 🍎 ⭐ 🚗. Agora tem 2: 🍎 🚗. Qual sumiu?',
-      answer: '⭐'
+      instructions: 'Memorize este número de telefone simples:',
+      words: [
+        { word: '1 - 2 - 3 - 4' },
+        { word: 'Escreva: ___ - ___ - ___ - ___' }
+      ]
     }
   },
   {
@@ -1283,11 +1611,14 @@ export const memoriaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'memoria',
     grade: ['maternal'],
-    title: 'Minha Rotina',
+    title: 'Minha Idade',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe 3 coisas que você faz todos os dias:',
-      spaces: ['Manhã:', 'Tarde:', 'Noite:']
+      instructions: 'Responda de memória:',
+      words: [
+        { word: 'Quantos anos você tem? _______________' },
+        { word: 'Em que ano você nasceu? _______________' }
+      ]
     }
   }
 ];

@@ -439,21 +439,14 @@ function renderAdaptedContent(content: any): string {
 
 // Função para fazer download do PDF
 export function downloadPDF(htmlContent: string, filename: string = 'atividades.pdf'): void {
-  // Criar um blob com o conteúdo HTML
-  const blob = new Blob([htmlContent], { type: 'text/html' });
-  const url = URL.createObjectURL(blob);
-  
   // Abrir em nova janela para impressão/salvamento como PDF
-  const printWindow = window.open(url, '_blank');
+  const printWindow = window.open('', '_blank');
   
   if (printWindow) {
+    printWindow.document.write(htmlContent);
+    printWindow.document.close();
     printWindow.onload = () => {
       printWindow.print();
     };
   }
-  
-  // Limpar a URL após um tempo
-  setTimeout(() => {
-    URL.revokeObjectURL(url);
-  }, 1000);
 }
