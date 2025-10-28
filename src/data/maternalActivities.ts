@@ -1,30 +1,26 @@
 import { Activity } from './activities';
+import maternalVogaisTrenzinho from '@/assets/maternal-vogais-trenzinho.png';
+import maternalContorneA from '@/assets/maternal-contorne-a.png';
+import maternalContorneE from '@/assets/maternal-contorne-e.png';
+import maternalContorneI from '@/assets/maternal-contorne-i.png';
+import maternalContorneO from '@/assets/maternal-contorne-o.png';
+import maternalContorneU from '@/assets/maternal-contorne-u.png';
+import maternalVogaisLigar1 from '@/assets/maternal-vogais-ligar-1.png';
+import maternalVogaisLigar2 from '@/assets/maternal-vogais-ligar-2.png';
+import maternalLetraInicialNome from '@/assets/maternal-letra-inicial-nome.png';
+import maternalFormePalavras from '@/assets/maternal-forme-palavras.png';
 
-// 10 Folhas A4 de Português para Maternal - Cada folha com múltiplos exercícios
+// 10 Folhas A4 de Português para Maternal - Com imagens completas
 export const portuguesMaternal: Activity[] = [
   {
     id: 'pt-mat-folha-001',
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 1 - Vogais A, E, I',
+    title: 'Vogais - Recorte e Cole no Trenzinho',
     difficulty: 'facil',
     content: {
-      instructions: 'Complete os exercícios abaixo:',
-      words: [
-        { word: '1. Circule todas as letras A: AVIÃO CASA ÁGUA MAMÃE PAPAI' },
-        { word: '2. Complete com A: _VIÃO C_S_ ÁGU_ M_MÃE P_P_I' },
-        { word: '3. Circule todas as letras E: ELEFANTE ESTRELA DEDO PÉ BEBÊ' },
-        { word: '4. Complete com E: _L_FANT_ _STR_LA D_DO P_ B_B_' },
-        { word: '5. Circule todas as letras I: IGREJA IGLU ILHA INDIA INÍCIO' },
-        { word: '6. Complete com I: _GREJA _GLU _LHA ÍND_A _NÍC_O' },
-        { word: '7. Escreva 3 vezes a letra A: ___ ___ ___' },
-        { word: '8. Escreva 3 vezes a letra E: ___ ___ ___' },
-        { word: '9. Escreva 3 vezes a letra I: ___ ___ ___' },
-        { word: '10. Quantas vogais tem a palavra AMIGO? ___' },
-        { word: '11. Quantas vogais tem a palavra ESCOLA? ___' },
-        { word: '12. Complete: A E I ___ ___' }
-      ]
+      imageUrl: maternalVogaisTrenzinho,
     }
   },
   {
@@ -32,24 +28,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 2 - Vogais O, U e Revisão',
+    title: 'Contorne a Letra A',
     difficulty: 'facil',
     content: {
-      instructions: 'Resolva todos os exercícios:',
-      words: [
-        { word: '1. Circule as letras O: BOLO GATO OSSO OLHO ROBÔ' },
-        { word: '2. Complete com O: B_L_ GAT_ _SS_ _LH_ R_BÔ' },
-        { word: '3. Circule as letras U: UVA AZUL LUA UNICÓRNIO PERU' },
-        { word: '4. Complete com U: _VA AZ_L L_A _NICÓRNIO PER_' },
-        { word: '5. Escreva as 5 vogais: ___ ___ ___ ___ ___' },
-        { word: '6. Quais são vogais? Circule: A B C D E F G H I J L M N O P U' },
-        { word: '7. Complete a palavra: C_S_' },
-        { word: '8. Complete a palavra: B_L_' },
-        { word: '9. Complete a palavra: G_T_' },
-        { word: '10. Complete a palavra: P_T_' },
-        { word: '11. Escreva uma palavra com A: _______________' },
-        { word: '12. Escreva uma palavra com E: _______________' }
-      ]
+      imageUrl: maternalContorneA,
     }
   },
   {
@@ -57,24 +39,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 3 - Família Silábica BA BE BI BO BU',
+    title: 'Contorne a Letra E',
     difficulty: 'facil',
     content: {
-      instructions: 'Pratique a família silábica do B:',
-      words: [
-        { word: '1. Complete: BA BE BI ___ ___' },
-        { word: '2. Escreva 3 vezes BA: ___ ___ ___' },
-        { word: '3. Escreva 3 vezes BE: ___ ___ ___' },
-        { word: '4. Escreva 3 vezes BI: ___ ___ ___' },
-        { word: '5. Escreva 3 vezes BO: ___ ___ ___' },
-        { word: '6. Escreva 3 vezes BU: ___ ___ ___' },
-        { word: '7. Complete: ___LA (BOLA)' },
-        { word: '8. Complete: ___BE (BEBÊ)' },
-        { word: '9. Complete: ___CO (BICO)' },
-        { word: '10. Complete: ___LO (BOLO)' },
-        { word: '11. Complete: ___ZIO (BÚZIO)' },
-        { word: '12. Leia e copie: BOLA _______________' }
-      ]
+      imageUrl: maternalContorneE,
     }
   },
   {
@@ -82,24 +50,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 4 - Família Silábica CA CO CU',
+    title: 'Contorne a Letra I',
     difficulty: 'facil',
     content: {
-      instructions: 'Pratique a família do C:',
-      words: [
-        { word: '1. Complete: CA CO CU ___ ___' },
-        { word: '2. Escreva 3 vezes CA: ___ ___ ___' },
-        { word: '3. Escreva 3 vezes CO: ___ ___ ___' },
-        { word: '4. Escreva 3 vezes CU: ___ ___ ___' },
-        { word: '5. Complete: ___SA (CASA)' },
-        { word: '6. Complete: ___PO (COPO)' },
-        { word: '7. Complete: ___BRA (COBRA)' },
-        { word: '8. Complete: ___RUJA (CORUJA)' },
-        { word: '9. Leia e copie: CASA _______________' },
-        { word: '10. Leia e copie: COCO _______________' },
-        { word: '11. Separe em sílabas: CASA CA-SA' },
-        { word: '12. Separe em sílabas: COPO ___-___' }
-      ]
+      imageUrl: maternalContorneI,
     }
   },
   {
@@ -107,24 +61,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 5 - Família Silábica DA DE DI DO DU',
+    title: 'Contorne a Letra O',
     difficulty: 'facil',
     content: {
-      instructions: 'Pratique a família do D:',
-      words: [
-        { word: '1. Complete a família: DA DE DI ___ ___' },
-        { word: '2. Escreva 3 vezes DA: ___ ___ ___' },
-        { word: '3. Escreva 3 vezes DE: ___ ___ ___' },
-        { word: '4. Escreva 3 vezes DI: ___ ___ ___' },
-        { word: '5. Escreva 3 vezes DO: ___ ___ ___' },
-        { word: '6. Escreva 3 vezes DU: ___ ___ ___' },
-        { word: '7. Complete: ___DO (DEDO)' },
-        { word: '8. Complete: ___TA (DATA)' },
-        { word: '9. Complete: ___A (DIA)' },
-        { word: '10. Leia e copie: DADO _______________' },
-        { word: '11. Leia e copie: DEDO _______________' },
-        { word: '12. Quantas sílabas tem DADO? ___' }
-      ]
+      imageUrl: maternalContorneO,
     }
   },
   {
@@ -132,24 +72,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 6 - Família Silábica MA ME MI MO MU',
+    title: 'Contorne a Letra U',
     difficulty: 'facil',
     content: {
-      instructions: 'Pratique a família do M:',
-      words: [
-        { word: '1. Complete: MA ME MI ___ ___' },
-        { word: '2. Escreva MA 3 vezes: ___ ___ ___' },
-        { word: '3. Escreva ME 3 vezes: ___ ___ ___' },
-        { word: '4. Escreva MI 3 vezes: ___ ___ ___' },
-        { word: '5. Escreva MO 3 vezes: ___ ___ ___' },
-        { word: '6. Escreva MU 3 vezes: ___ ___ ___' },
-        { word: '7. Complete: ___MÃE (MAMÃE)' },
-        { word: '8. Complete: ___LA (MALA)' },
-        { word: '9. Complete: ___TO (MATO)' },
-        { word: '10. Complete: ___DO (MUDO)' },
-        { word: '11. Copie: MAMÃE _______________' },
-        { word: '12. Copie: MEIA _______________' }
-      ]
+      imageUrl: maternalContorneU,
     }
   },
   {
@@ -157,24 +83,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 7 - Família Silábica PA PE PI PO PU',
+    title: 'Vogais - Ligue os Desenhos',
     difficulty: 'facil',
     content: {
-      instructions: 'Pratique a família do P:',
-      words: [
-        { word: '1. Complete: PA PE PI ___ ___' },
-        { word: '2. Escreva PA 3 vezes: ___ ___ ___' },
-        { word: '3. Escreva PE 3 vezes: ___ ___ ___' },
-        { word: '4. Escreva PI 3 vezes: ___ ___ ___' },
-        { word: '5. Escreva PO 3 vezes: ___ ___ ___' },
-        { word: '6. Escreva PU 3 vezes: ___ ___ ___' },
-        { word: '7. Complete: ___PAI (PAPAI)' },
-        { word: '8. Complete: ___TO (PATO)' },
-        { word: '9. Complete: ___PA (PIPA)' },
-        { word: '10. Complete: ___TE (POTE)' },
-        { word: '11. Copie: PAPAI _______________' },
-        { word: '12. Copie: PATO _______________' }
-      ]
+      imageUrl: maternalVogaisLigar1,
     }
   },
   {
@@ -182,24 +94,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 8 - Juntando Sílabas',
+    title: 'Vogais - Ligue os Desenhos 2',
     difficulty: 'facil',
     content: {
-      instructions: 'Junte as sílabas para formar palavras:',
-      words: [
-        { word: '1. BO + LA = _______________' },
-        { word: '2. CA + SA = _______________' },
-        { word: '3. PA + TO = _______________' },
-        { word: '4. DA + DO = _______________' },
-        { word: '5. ME + SA = _______________' },
-        { word: '6. PI + PA = _______________' },
-        { word: '7. BO + LO = _______________' },
-        { word: '8. GA + TO = _______________' },
-        { word: '9. MA + LA = _______________' },
-        { word: '10. PE + NA = _______________' },
-        { word: '11. Separe: BOLA ___-___' },
-        { word: '12. Separe: PATO ___-___' }
-      ]
+      imageUrl: maternalVogaisLigar2,
     }
   },
   {
@@ -207,24 +105,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 9 - Primeira e Última Letra',
+    title: 'Encontre a Letra Inicial do Seu Nome',
     difficulty: 'facil',
     content: {
-      instructions: 'Identifique as letras:',
-      words: [
-        { word: '1. Primeira letra de BOLA: ___' },
-        { word: '2. Última letra de BOLA: ___' },
-        { word: '3. Primeira letra de GATO: ___' },
-        { word: '4. Última letra de GATO: ___' },
-        { word: '5. Primeira letra de CASA: ___' },
-        { word: '6. Última letra de CASA: ___' },
-        { word: '7. Primeira letra de DADO: ___' },
-        { word: '8. Última letra de DADO: ___' },
-        { word: '9. Primeira letra de PIPA: ___' },
-        { word: '10. Última letra de PIPA: ___' },
-        { word: '11. Escreva seu nome: _______________' },
-        { word: '12. Primeira letra do seu nome: ___' }
-      ]
+      imageUrl: maternalLetraInicialNome,
     }
   },
   {
@@ -232,24 +116,10 @@ export const portuguesMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'portugues',
     grade: ['maternal'],
-    title: 'Folha 10 - Revisão Geral',
+    title: 'Forme as Palavras',
     difficulty: 'facil',
     content: {
-      instructions: 'Revisão de tudo que aprendemos:',
-      words: [
-        { word: '1. Escreva as vogais: ___ ___ ___ ___ ___' },
-        { word: '2. Complete: ___OLA (BOLA)' },
-        { word: '3. Complete: ___ASA (CASA)' },
-        { word: '4. Complete: GA___ (GATO)' },
-        { word: '5. Junte: MA + MÃE = _______________' },
-        { word: '6. Junte: PA + PAI = _______________' },
-        { word: '7. Separe: BOLO ___-___' },
-        { word: '8. Separe: MALA ___-___' },
-        { word: '9. Conte as letras de CASA: ___' },
-        { word: '10. Conte as letras de PATO: ___' },
-        { word: '11. Copie seu nome: _______________' },
-        { word: '12. Desenhe e escreva o nome de um animal: _______________' }
-      ]
+      imageUrl: maternalFormePalavras,
     }
   }
 ];

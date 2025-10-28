@@ -252,54 +252,64 @@ export default function ActivitiesView() {
               </div>
 
               {/* Conteúdo da atividade */}
-              <div className="bg-white rounded-lg p-6 border-2 border-dashed min-h-[400px]">
-                {activity.content.instructions && (
-                  <p className="font-medium text-base mb-4">{activity.content.instructions}</p>
-                )}
-                
-                {/* Exercícios com palavras */}
-                {activity.content.words && (
-                  <div className="space-y-2">
-                    {activity.content.words.map((item: any, idx: number) => (
-                      <div key={idx} className="text-base">
-                        {typeof item === 'string' ? item : item.word}
-                      </div>
-                    ))}
-                  </div>
-                )}
-                
-                {/* Exercícios de matemática */}
-                {activity.content.problems && (
-                  <div className="space-y-2">
-                    {activity.content.problems.map((item: any, idx: number) => (
-                      <div key={idx} className="text-base">
-                        {item.problem}
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {/* Questões */}
-                {activity.content.questions && (
-                  <div className="space-y-4">
-                    {activity.content.text && (
-                      <div className="p-4 bg-muted rounded-lg">
-                        <p className="text-sm">{activity.content.text}</p>
+              <div className="bg-white rounded-lg overflow-hidden border-2 border-dashed">
+                {activity.content.imageUrl ? (
+                  <img 
+                    src={activity.content.imageUrl} 
+                    alt={activity.title}
+                    className="w-full h-auto"
+                  />
+                ) : (
+                  <div className="p-6 min-h-[400px]">
+                    {activity.content.instructions && (
+                      <p className="font-medium text-base mb-4">{activity.content.instructions}</p>
+                    )}
+                    
+                    {/* Exercícios com palavras */}
+                    {activity.content.words && (
+                      <div className="space-y-2">
+                        {activity.content.words.map((item: any, idx: number) => (
+                          <div key={idx} className="text-base">
+                            {typeof item === 'string' ? item : item.word}
+                          </div>
+                        ))}
                       </div>
                     )}
-                    {activity.content.questions.map((q: any, idx: number) => (
-                      <div key={idx} className="space-y-2">
-                        <p className="font-medium">{idx + 1}. {q.question}</p>
-                        <div className="grid grid-cols-2 gap-2 ml-4">
-                          {q.options.map((opt: string, optIdx: number) => (
-                            <label key={optIdx} className="flex items-center gap-2">
-                              <input type="radio" name={`q${idx}-${activity.id}`} />
-                              <span>{opt}</span>
-                            </label>
-                          ))}
-                        </div>
+                    
+                    {/* Exercícios de matemática */}
+                    {activity.content.problems && (
+                      <div className="space-y-2">
+                        {activity.content.problems.map((item: any, idx: number) => (
+                          <div key={idx} className="text-base">
+                            {item.problem}
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    )}
+
+                    {/* Questões */}
+                    {activity.content.questions && (
+                      <div className="space-y-4">
+                        {activity.content.text && (
+                          <div className="p-4 bg-muted rounded-lg">
+                            <p className="text-sm">{activity.content.text}</p>
+                          </div>
+                        )}
+                        {activity.content.questions.map((q: any, idx: number) => (
+                          <div key={idx} className="space-y-2">
+                            <p className="font-medium">{idx + 1}. {q.question}</p>
+                            <div className="grid grid-cols-2 gap-2 ml-4">
+                              {q.options.map((opt: string, optIdx: number) => (
+                                <label key={optIdx} className="flex items-center gap-2">
+                                  <input type="radio" name={`q${idx}-${activity.id}`} />
+                                  <span>{opt}</span>
+                                </label>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
