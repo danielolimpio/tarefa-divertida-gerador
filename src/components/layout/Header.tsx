@@ -23,10 +23,10 @@ export function Header() {
       href: "/educacao-infantil",
       description: "Atividades para maternal, jardim e pré-escola",
       items: [
-        { title: "Maternal", href: "/gerador" },
-        { title: "Jardim 1 e 2", href: "/gerador" },
-        { title: "Pré-escola", href: "/gerador" },
-        { title: "Alfabetização", href: "/gerador" },
+        { title: "Maternal", href: "/gerador-atividade-escolar" },
+        { title: "Jardim 1 e 2", href: "/gerador-atividade-escolar" },
+        { title: "Pré-escola", href: "/gerador-atividade-escolar" },
+        { title: "Alfabetização", href: "/gerador-atividade-escolar" },
       ]
     },
     {
@@ -34,10 +34,10 @@ export function Header() {
       href: "/ensino-fundamental",
       description: "Atividades do 1º ao 9º ano",
       items: [
-        { title: "1º ao 3º Ano", href: "/gerador" },
-        { title: "4º e 5º Ano", href: "/gerador" },
-        { title: "6º ao 9º Ano", href: "/gerador" },
-        { title: "Reforço Escolar", href: "/gerador" },
+        { title: "1º ao 3º Ano", href: "/gerador-atividade-escolar" },
+        { title: "4º e 5º Ano", href: "/gerador-atividade-escolar" },
+        { title: "6º ao 9º Ano", href: "/gerador-atividade-escolar" },
+        { title: "Reforço Escolar", href: "/gerador-atividade-escolar" },
       ]
     },
     {
@@ -45,10 +45,10 @@ export function Header() {
       href: "/materias",
       description: "Atividades organizadas por disciplina",
       items: [
-        { title: "Português", href: "/gerador" },
-        { title: "Matemática", href: "/gerador" },
-        { title: "Ciências", href: "/gerador" },
-        { title: "História e Geografia", href: "/gerador" },
+        { title: "Português", href: "/gerador-atividade-escolar" },
+        { title: "Matemática", href: "/gerador-atividade-escolar" },
+        { title: "Ciências", href: "/gerador-atividade-escolar" },
+        { title: "História e Geografia", href: "/gerador-atividade-escolar" },
       ]
     },
     {
@@ -56,10 +56,10 @@ export function Header() {
       href: "/inclusao",
       description: "Atividades adaptadas e AEE",
       items: [
-        { title: "Autismo", href: "/gerador" },
-        { title: "TDAH", href: "/gerador" },
-        { title: "Deficiência Intelectual", href: "/gerador" },
-        { title: "AEE", href: "/gerador" },
+        { title: "Autismo", href: "/gerador-atividade-escolar" },
+        { title: "TDAH", href: "/gerador-atividade-escolar" },
+        { title: "Deficiência Intelectual", href: "/gerador-atividade-escolar" },
+        { title: "AEE", href: "/gerador-atividade-escolar" },
       ]
     },
   ];
@@ -137,7 +137,7 @@ export function Header() {
               </Link>
             </Button>
             <Button size="sm" className="bg-gradient-primary hover:opacity-90" asChild>
-              <Link to="/gerador">
+              <Link to="/gerador-atividade-escolar">
                 <Brain className="mr-2 h-4 w-4 text-blue-400 fill-yellow-400" />
                 Atividades Especiais
               </Link>
@@ -192,7 +192,7 @@ export function Header() {
                     Blog
                   </Link>
                   <Button className="w-full bg-gradient-primary" asChild>
-                    <Link to="/gerador" onClick={() => setIsOpen(false)}>
+                    <Link to="/gerador-atividade-escolar" onClick={() => setIsOpen(false)}>
                       <Download className="mr-2 h-4 w-4" />
                       Gerar Atividades
                     </Link>

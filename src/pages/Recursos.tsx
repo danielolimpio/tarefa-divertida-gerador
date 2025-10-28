@@ -102,7 +102,7 @@ const Recursos = () => {
       title: "Gerador de Atividades",
       description: "Crie atividades personalizadas com nossa ferramenta inteligente",
       icon: <Brain className="h-8 w-8" />,
-      link: "/gerador",
+      link: "/gerador-atividade-escolar",
       featured: true
     },
     {
@@ -299,7 +299,7 @@ const Recursos = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link to="/gerador">
+                <Link to="/gerador-atividade-escolar">
                   Começar Agora
                 </Link>
               </Button>

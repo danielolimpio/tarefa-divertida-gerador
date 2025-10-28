@@ -81,7 +81,7 @@ const EducacaoInfantil = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-gradient-primary hover:opacity-90" asChild>
-                  <Link to="/gerador">
+                  <Link to="/gerador-atividade-escolar">
                     <Download className="mr-2 h-5 w-5" />
                     Gerar Atividades Grátis
                   </Link>
@@ -146,7 +146,7 @@ const EducacaoInfantil = () => {
                       ))}
                     </div>
                     <Button className="w-full" variant="outline" asChild>
-                      <Link to="/gerador">
+                      <Link to="/gerador-atividade-escolar">
                         Acessar Atividades
                       </Link>
                     </Button>
@@ -170,7 +170,7 @@ const EducacaoInfantil = () => {
                 Ideal para professores, pais e educadores.
               </p>
               <Button size="lg" className="bg-gradient-primary hover:opacity-90" asChild>
-                <Link to="/gerador">
+                <Link to="/gerador-atividade-escolar">
                   <Brain className="mr-2 h-5 w-5" />
                   Criar Minhas Atividades
                 </Link>

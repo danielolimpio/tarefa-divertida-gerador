@@ -121,7 +121,7 @@ export function PopularActivitiesSection() {
                 </div>
 
                 <Button className="w-full" variant="outline" size="sm" asChild>
-                  <Link to="/gerador">
+                  <Link to="/gerador-atividade-escolar">
                     <Download className="mr-2 h-4 w-4" />
                     Baixar Grátis
                   </Link>
@@ -133,7 +133,7 @@ export function PopularActivitiesSection() {
 
         <div className="text-center mt-8">
           <Button size="lg" asChild>
-            <Link to="/gerador">
+            <Link to="/gerador-atividade-escolar">
               Ver Todas as Atividades
             </Link>
           </Button>

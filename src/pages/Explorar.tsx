@@ -255,7 +255,7 @@ const Explorar = () => {
 
                     <div className="flex gap-2">
                       <Button className="flex-1" variant="outline" size="sm" asChild>
-                        <Link to="/gerador">
+                        <Link to="/gerador-atividade-escolar">
                           <Download className="mr-2 h-4 w-4" />
                           Baixar
                         </Link>

@@ -1,26 +1,24 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { BookOpen, GraduationCap, Palette, Brain, Printer, Download } from "lucide-react";
+import { BookOpen, GraduationCap, Palette, Eye, Brain } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { getActivities } from "@/data/activities";
-import { generateActivityHTML, downloadPDF } from "@/utils/pdfGenerator";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { ActivityGenerator } from "@/components/ActivityGenerator";
+
+// Função para criar slug amigável para SEO
+const createSlug = (grade: string, type: string, subject: string) => {
+  return `${grade}-${type}-${subject}`;
+};
 
 const Index = () => {
+  const navigate = useNavigate();
   const [selectedGrade, setSelectedGrade] = useState("");
-  const [selectedActivityType, setSelectedActivityType] = useState<string[]>([]);
-  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
-  const [exerciseCount, setExerciseCount] = useState("10");
-  const [studentName, setStudentName] = useState("");
-  const [colorMode, setColorMode] = useState<'colorido' | 'pb'>('colorido');
-  const [showPreview, setShowPreview] = useState(false);
-  const [generatedActivities, setGeneratedActivities] = useState<any[]>([]);
+  const [selectedActivityType, setSelectedActivityType] = useState("");
+  const [selectedSubject, setSelectedSubject] = useState("");
 
   const grades = [
     { value: "maternal", label: "Maternal", icon: "🍼" },
@@ -63,23 +61,7 @@ const Index = () => {
     { value: "memoria", label: "Memória", icon: "🧠" },
   ];
 
-  const handleActivityTypeToggle = (value: string) => {
-    setSelectedActivityType(prev =>
-      prev.includes(value)
-        ? prev.filter(item => item !== value)
-        : [...prev, value]
-    );
-  };
-
-  const handleSubjectToggle = (value: string) => {
-    setSelectedSubjects(prev =>
-      prev.includes(value)
-        ? prev.filter(item => item !== value)
-        : [...prev, value]
-    );
-  };
-
-  const handleGenerate = () => {
+  const handleViewActivities = () => {
     if (!selectedGrade) {
       toast({
         title: "Atenção",
@@ -89,74 +71,44 @@ const Index = () => {
       return;
     }
 
-    if (selectedActivityType.length === 0) {
+    if (!selectedActivityType) {
       toast({
         title: "Atenção",
-        description: "Por favor, selecione pelo menos um tipo de atividade.",
+        description: "Por favor, selecione um tipo de atividade.",
         variant: "destructive"
       });
       return;
     }
 
-    if (selectedSubjects.length === 0) {
+    if (!selectedSubject) {
       toast({
         title: "Atenção",
-        description: "Por favor, selecione pelo menos uma matéria.",
+        description: "Por favor, selecione uma matéria.",
         variant: "destructive"
       });
       return;
     }
 
-    // Gerar atividades baseadas nas seleções
+    // Verificar se existem atividades
     const activities = getActivities({
       grade: selectedGrade,
-      subjects: selectedSubjects,
-      types: selectedActivityType,
-      count: parseInt(exerciseCount),
+      subjects: [selectedSubject],
+      types: [selectedActivityType],
+      count: 10,
     });
 
     if (activities.length === 0) {
       toast({
         title: "Nenhuma atividade encontrada",
-        description: "Tente selecionar outras opções.",
+        description: "Ainda não temos atividades para esta combinação. Tente outras opções.",
         variant: "destructive"
       });
       return;
     }
 
-    setGeneratedActivities(activities);
-    return activities;
-  };
-
-  const handleGeneratePDF = () => {
-    const activities = handleGenerate();
-    if (!activities) return;
-
-    toast({
-      title: "Gerando PDF...",
-      description: "Suas atividades estão sendo preparadas para impressão!",
-    });
-
-    setTimeout(() => {
-      const htmlContent = generateActivityHTML(activities, studentName, colorMode);
-      downloadPDF(htmlContent, `atividades_${selectedGrade}_${Date.now()}.pdf`);
-      
-      toast({
-        title: "PDF Gerado com Sucesso!",
-        description: `${activities.length} atividade(s) preparada(s) para impressão.`,
-      });
-    }, 500);
-  };
-
-  const handlePreview = () => {
-    const activities = handleGenerate();
-    if (!activities) return;
-    
-    setShowPreview(true);
-    toast({
-      title: "Visualização",
-      description: `Mostrando ${activities.length} atividade(s) gerada(s).`,
-    });
+    // Criar slug e navegar
+    const slug = createSlug(selectedGrade, selectedActivityType, selectedSubject);
+    navigate(`/atividades/${slug}`);
   };
 
   return (
@@ -223,29 +175,25 @@ const Index = () => {
                   <Palette className="h-5 w-5" />
                   Tipo de Atividade
                 </CardTitle>
-                <CardDescription>Escolha os tipos de exercícios</CardDescription>
+                <CardDescription>Escolha um tipo de exercício</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
-                  {activityTypes.map((activity) => (
-                    <div key={activity.value} className="flex items-start space-x-2">
-                      <Checkbox
-                        id={activity.value}
-                        checked={selectedActivityType.includes(activity.value)}
-                        onCheckedChange={() => handleActivityTypeToggle(activity.value)}
-                      />
-                      <div className="flex-1">
+                <RadioGroup value={selectedActivityType} onValueChange={setSelectedActivityType}>
+                  <div className="space-y-3">
+                    {activityTypes.map((activity) => (
+                      <div key={activity.value} className="flex items-start space-x-2">
+                        <RadioGroupItem value={activity.value} id={activity.value} />
                         <Label 
                           htmlFor={activity.value}
-                          className="cursor-pointer"
+                          className="cursor-pointer flex-1"
                         >
                           <div className="font-medium">{activity.label}</div>
                           <div className="text-xs text-muted-foreground">{activity.description}</div>
                         </Label>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                </RadioGroup>
               </CardContent>
             </Card>
 
@@ -253,83 +201,31 @@ const Index = () => {
             <Card>
               <CardHeader>
                 <CardTitle>Matérias e Habilidades</CardTitle>
-                <CardDescription>Selecione as disciplinas</CardDescription>
+                <CardDescription>Selecione uma disciplina</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-3">
-                  {subjects.map((subject) => (
-                    <div key={subject.value} className="flex items-center space-x-2">
-                      <Checkbox
-                        id={subject.value}
-                        checked={selectedSubjects.includes(subject.value)}
-                        onCheckedChange={() => handleSubjectToggle(subject.value)}
-                      />
-                      <Label 
-                        htmlFor={subject.value}
-                        className="cursor-pointer flex items-center gap-1 text-sm"
-                      >
-                        <span>{subject.icon}</span>
-                        {subject.label}
-                      </Label>
-                    </div>
-                  ))}
-                </div>
+                <RadioGroup value={selectedSubject} onValueChange={setSelectedSubject}>
+                  <div className="grid grid-cols-2 gap-3">
+                    {subjects.map((subject) => (
+                      <div key={subject.value} className="flex items-center space-x-2">
+                        <RadioGroupItem value={subject.value} id={subject.value} />
+                        <Label 
+                          htmlFor={subject.value}
+                          className="cursor-pointer flex items-center gap-1 text-sm"
+                        >
+                          <span>{subject.icon}</span>
+                          {subject.label}
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
+                </RadioGroup>
               </CardContent>
             </Card>
           </div>
 
-          {/* Right Column - Configuration and Generate */}
+          {/* Right Column - Summary and Generate */}
           <div className="lg:col-span-1 space-y-6">
-            {/* Configuration */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Configurações</CardTitle>
-                <CardDescription>Personalize suas atividades</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="student-name">Nome do Aluno (opcional)</Label>
-                  <input
-                    id="student-name"
-                    type="text"
-                    value={studentName}
-                    onChange={(e) => setStudentName(e.target.value)}
-                    placeholder="Digite o nome do aluno"
-                    className="w-full px-3 py-2 border rounded-md bg-background"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="exercise-count">Quantidade de Exercícios</Label>
-                  <Select value={exerciseCount} onValueChange={setExerciseCount}>
-                    <SelectTrigger id="exercise-count">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="5">5 exercícios</SelectItem>
-                      <SelectItem value="10">10 exercícios</SelectItem>
-                      <SelectItem value="15">15 exercícios</SelectItem>
-                      <SelectItem value="20">20 exercícios</SelectItem>
-                      <SelectItem value="30">30 exercícios</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label>Formato de Impressão</Label>
-                  <RadioGroup value={colorMode} onValueChange={(value) => setColorMode(value as 'colorido' | 'pb')}>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="colorido" id="colorido" />
-                      <Label htmlFor="colorido">Colorido</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="pb" id="pb" />
-                      <Label htmlFor="pb">Preto e Branco</Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Summary */}
             <Card className="border-primary/20 bg-primary/5">
@@ -342,59 +238,29 @@ const Index = () => {
                   {grades.find(g => g.value === selectedGrade)?.label || "Não selecionada"}
                 </div>
                 <div className="text-sm">
-                  <span className="font-medium">Tipos:</span>{" "}
-                  {selectedActivityType.length > 0 ? `${selectedActivityType.length} selecionados` : "Nenhum"}
+                  <span className="font-medium">Tipo:</span>{" "}
+                  {selectedActivityType ? activityTypes.find(t => t.value === selectedActivityType)?.label : "Não selecionado"}
                 </div>
                 <div className="text-sm">
-                  <span className="font-medium">Matérias:</span>{" "}
-                  {selectedSubjects.length > 0 ? `${selectedSubjects.length} selecionadas` : "Nenhuma"}
-                </div>
-                <div className="text-sm">
-                  <span className="font-medium">Quantidade:</span> {exerciseCount} exercícios
+                  <span className="font-medium">Matéria:</span>{" "}
+                  {selectedSubject ? subjects.find(s => s.value === selectedSubject)?.label : "Não selecionada"}
                 </div>
               </CardContent>
             </Card>
 
-            {/* Generate Buttons */}
-            <div className="space-y-3">
-              <Button 
-                onClick={handleGeneratePDF}
-                className="w-full" 
-                size="lg"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Gerar PDF para Impressão
-              </Button>
-              <Button 
-                variant="outline" 
-                className="w-full"
-                onClick={handlePreview}
-              >
-                <Printer className="mr-2 h-4 w-4" />
-                Visualizar Antes de Imprimir
-              </Button>
-            </div>
+            {/* Generate Button */}
+            <Button 
+              onClick={handleViewActivities}
+              className="w-full" 
+              size="lg"
+            >
+              <Eye className="mr-2 h-5 w-5" />
+              Ver Atividades
+            </Button>
           </div>
         </div>
       </main>
 
-      {/* Preview Dialog */}
-      <Dialog open={showPreview} onOpenChange={setShowPreview}>
-        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>Pré-visualização das Atividades</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-6">
-            {generatedActivities.length > 0 ? (
-              <ActivityGenerator activities={generatedActivities} studentName={studentName} />
-            ) : (
-              <p className="text-center text-muted-foreground py-8">
-                Nenhuma atividade para visualizar
-              </p>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
