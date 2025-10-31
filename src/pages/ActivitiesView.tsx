@@ -252,12 +252,12 @@ export default function ActivitiesView() {
               </div>
 
               {/* Conteúdo da atividade */}
-              <div className="bg-white rounded-lg overflow-hidden border-2 border-dashed">
+              <div className="bg-white rounded-lg overflow-hidden border-2 border-dashed flex justify-center">
                 {activity.content.imageUrl ? (
                   <img 
                     src={activity.content.imageUrl} 
                     alt={activity.title}
-                    className="w-full h-auto"
+                    className="max-w-2xl w-full h-auto mx-auto"
                   />
                 ) : (
                   <div className="p-6 min-h-[400px]">

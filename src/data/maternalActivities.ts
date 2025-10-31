@@ -9,6 +9,16 @@ import maternalVogaisLigar1 from '@/assets/maternal-vogais-ligar-1.png';
 import maternalVogaisLigar2 from '@/assets/maternal-vogais-ligar-2.png';
 import maternalLetraInicialNome from '@/assets/maternal-letra-inicial-nome.png';
 import maternalFormePalavras from '@/assets/maternal-forme-palavras.png';
+import maternalMatematica1 from '@/assets/maternal-matematica-1.png';
+import maternalMatematica2 from '@/assets/maternal-matematica-2.png';
+import maternalMatematica3 from '@/assets/maternal-matematica-3.png';
+import maternalMatematica4 from '@/assets/maternal-matematica-4.png';
+import maternalMatematica5 from '@/assets/maternal-matematica-5.png';
+import maternalMatematica6 from '@/assets/maternal-matematica-6.png';
+import maternalMatematica7 from '@/assets/maternal-matematica-7.png';
+import maternalMatematica8 from '@/assets/maternal-matematica-8.png';
+import maternalMatematica9 from '@/assets/maternal-matematica-9.png';
+import maternalMatematica10 from '@/assets/maternal-matematica-10.png';
 
 // 10 Folhas A4 de Português para Maternal - Com imagens completas
 export const portuguesMaternal: Activity[] = [
@@ -124,20 +134,17 @@ export const portuguesMaternal: Activity[] = [
   }
 ];
 
-// 10 Atividades de Matemática para Maternal
+// 10 Atividades de Matemática para Maternal - Com imagens completas
 export const matematicaMaternal: Activity[] = [
   {
     id: 'mat-mat-001',
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Número 1',
+    title: 'Conte e Ligue ao Número',
     difficulty: 'facil',
     content: {
-      instructions: 'Escreva o número 1 cinco vezes:',
-      words: [
-        { word: '___ ___ ___ ___ ___' }
-      ]
+      imageUrl: maternalMatematica1,
     }
   },
   {
@@ -145,13 +152,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Número 2',
+    title: 'Números e Quantidades',
     difficulty: 'facil',
     content: {
-      instructions: 'Escreva o número 2 cinco vezes:',
-      words: [
-        { word: '___ ___ ___ ___ ___' }
-      ]
+      imageUrl: maternalMatematica2,
     }
   },
   {
@@ -159,13 +163,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Número 3',
+    title: 'Atividade Número 3',
     difficulty: 'facil',
     content: {
-      instructions: 'Escreva o número 3 cinco vezes:',
-      words: [
-        { word: '___ ___ ___ ___ ___' }
-      ]
+      imageUrl: maternalMatematica3,
     }
   },
   {
@@ -173,14 +174,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Contar de 1 a 5',
+    title: 'Encontre os Números Iguais',
     difficulty: 'facil',
     content: {
-      instructions: 'Complete a sequência numérica:',
-      words: [
-        { word: '1 - 2 - ___ - 4 - ___' },
-        { word: '1 - ___ - 3 - ___ - 5' }
-      ]
+      imageUrl: maternalMatematica4,
     }
   },
   {
@@ -188,16 +185,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Maior ou Menor',
+    title: 'Números e Quantidades - Ligue',
     difficulty: 'facil',
     content: {
-      instructions: 'Circule o MAIOR número em cada linha:',
-      words: [
-        { word: '1    3' },
-        { word: '2    5' },
-        { word: '4    1' },
-        { word: '3    2' }
-      ]
+      imageUrl: maternalMatematica5,
     }
   },
   {
@@ -205,16 +196,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Somas Simples',
+    title: 'Conte as Frutas',
     difficulty: 'facil',
     content: {
-      instructions: 'Resolva as continhas:',
-      problems: [
-        { problem: '1 + 1 = ___' },
-        { problem: '2 + 1 = ___' },
-        { problem: '1 + 2 = ___' },
-        { problem: '2 + 2 = ___' }
-      ]
+      imageUrl: maternalMatematica6,
     }
   },
   {
@@ -222,16 +207,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Antes e Depois',
+    title: 'Números Pares',
     difficulty: 'facil',
     content: {
-      instructions: 'Escreva o número que vem ANTES e DEPOIS:',
-      words: [
-        { word: '___ 2 ___' },
-        { word: '___ 3 ___' },
-        { word: '___ 4 ___' },
-        { word: '___ 5 ___' }
-      ]
+      imageUrl: maternalMatematica7,
     }
   },
   {
@@ -239,16 +218,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Quantos Faltam?',
+    title: 'Números e Letras',
     difficulty: 'facil',
     content: {
-      instructions: 'Complete para chegar ao número:',
-      words: [
-        { word: '2 + ___ = 3' },
-        { word: '1 + ___ = 4' },
-        { word: '3 + ___ = 5' },
-        { word: '2 + ___ = 4' }
-      ]
+      imageUrl: maternalMatematica8,
     }
   },
   {
@@ -256,16 +229,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Subtrações Simples',
+    title: 'Pintando com Números',
     difficulty: 'facil',
     content: {
-      instructions: 'Resolva as continhas:',
-      problems: [
-        { problem: '2 - 1 = ___' },
-        { problem: '3 - 1 = ___' },
-        { problem: '4 - 2 = ___' },
-        { problem: '5 - 1 = ___' }
-      ]
+      imageUrl: maternalMatematica9,
     }
   },
   {
@@ -273,14 +240,10 @@ export const matematicaMaternal: Activity[] = [
     type: 'exercicios',
     subject: 'matematica',
     grade: ['maternal'],
-    title: 'Ordem Crescente',
+    title: 'Adição - Siga o Modelo',
     difficulty: 'facil',
     content: {
-      instructions: 'Coloque os números em ordem do menor para o maior:',
-      words: [
-        { word: '3 - 1 - 2    Ordem: ___ ___ ___' },
-        { word: '5 - 2 - 4    Ordem: ___ ___ ___' }
-      ]
+      imageUrl: maternalMatematica10,
     }
   }
 ];
