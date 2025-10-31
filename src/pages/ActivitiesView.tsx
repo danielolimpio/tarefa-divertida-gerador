@@ -252,7 +252,7 @@ export default function ActivitiesView() {
               </div>
 
               {/* Conteúdo da atividade */}
-              <div className="bg-white rounded-lg overflow-hidden border-2 border-dashed flex justify-center">
+              <div className="bg-white rounded-lg overflow-hidden border border-dashed flex justify-center">
                 {activity.content.imageUrl ? (
                   <img 
                     src={activity.content.imageUrl} 
@@ -319,12 +319,12 @@ export default function ActivitiesView() {
                 <p className="text-xs text-muted-foreground">
                   Copyright 2025 | Todos direitos reservados |{' '}
                   <a 
-                    href="https://atividadeescolar.com" 
+                    href="https://atividadeseducacaoinfantil.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    https://atividadeescolar.com
+                    https://atividadeseducacaoinfantil.com
                   </a>
                 </p>
               </div>
