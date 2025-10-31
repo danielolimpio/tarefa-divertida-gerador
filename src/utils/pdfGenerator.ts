@@ -244,7 +244,7 @@ export function generateActivityHTML(
   
   const watermark = `
     <div class="watermark">
-      <p>Copyright 2025 | Todos direitos reservados | <a href="https://atividadeescolar.com" target="_blank">https://atividadeescolar.com</a></p>
+      <p>Copyright 2025 | Todos direitos reservados | <a href="https://atividadeseducacaoinfantil.com" target="_blank">https://atividadeseducacaoinfantil.com</a></p>
     </div>
   `;
   
@@ -268,7 +268,14 @@ export function generateActivityHTML(
 
 // Funções auxiliares para renderizar cada tipo de conteúdo
 function renderExerciseContent(content: any): string {
-  let html = `<p class="instructions">${content.instructions}</p>`;
+  // Se houver imageUrl, renderizar apenas a imagem
+  if (content.imageUrl) {
+    return `<div style="text-align: center; margin: 20px 0;">
+      <img src="${content.imageUrl}" style="max-width: 100%; height: auto;" alt="Atividade" />
+    </div>`;
+  }
+  
+  let html = `<p class="instructions">${content.instructions || ''}</p>`;
   
   if (content.words) {
     html += '<div class="exercise-grid">';
