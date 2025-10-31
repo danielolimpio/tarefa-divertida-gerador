@@ -229,9 +229,9 @@ export default function ActivitiesView() {
         </div>
 
         {/* Lista de atividades */}
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-3xl mx-auto">
           {activities.map((activity, index) => (
-            <Card key={activity.id} className="p-6 bg-background shadow-md">
+            <Card key={activity.id} className="p-4 bg-background shadow-md">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h2 className="text-xl font-bold text-foreground">
@@ -252,12 +252,12 @@ export default function ActivitiesView() {
               </div>
 
               {/* Conteúdo da atividade */}
-              <div className="bg-white rounded-lg overflow-hidden border border-dashed flex justify-center">
+              <div className="bg-white rounded-lg overflow-hidden border border-dashed flex justify-center p-2">
                 {activity.content.imageUrl ? (
                   <img 
                     src={activity.content.imageUrl} 
                     alt={activity.title}
-                    className="max-w-lg w-full h-auto mx-auto"
+                    className="w-full h-auto"
                   />
                 ) : (
                   <div className="p-6 min-h-[400px]">
