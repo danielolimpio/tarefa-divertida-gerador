@@ -189,6 +189,12 @@ export function generateActivityHTML(
       .watermark a:hover {
         text-decoration: underline;
       }
+
+      @media print {
+        .header { display: none !important; }
+        .activity { border: 0; padding: 0; margin: 0 0 10mm; }
+        img { display: block; width: 100%; height: auto; break-inside: avoid; page-break-inside: avoid; }
+      }
     </style>
   `;
   
@@ -444,16 +450,93 @@ function renderAdaptedContent(content: any): string {
   return html;
 }
 
-// Função para fazer download do PDF
-export function downloadPDF(htmlContent: string, filename: string = 'atividades.pdf'): void {
-  // Abrir em nova janela para impressão/salvamento como PDF
-  const printWindow = window.open('', '_blank');
-  
-  if (printWindow) {
-    printWindow.document.write(htmlContent);
-    printWindow.document.close();
-    printWindow.onload = () => {
-      printWindow.print();
-    };
+// Função utilitária para transformar todas as imagens do HTML em data URLs e garantir carregamento no print
+async function inlineImagesInHTML(html: string): Promise<string> {
+  const imgSrcRegex = /<img\s+[^>]*src=["']([^"']+)["'][^>]*>/gi;
+  const srcs: string[] = [];
+  let match: RegExpExecArray | null;
+  while ((match = imgSrcRegex.exec(html)) !== null) {
+    const src = match[1];
+    if (src && !src.startsWith('data:')) {
+      try {
+        const abs = new URL(src, window.location.href).href;
+        srcs.push(abs);
+      } catch {
+        // ignora URLs inválidas
+      }
+    }
   }
+
+  const uniqueSrcs = Array.from(new Set(srcs));
+  const map = new Map<string, string>();
+
+  await Promise.all(uniqueSrcs.map(async (url) => {
+    try {
+      const res = await fetch(url, { mode: 'cors', credentials: 'omit', cache: 'force-cache' });
+      const blob = await res.blob();
+      const dataUrl = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+      map.set(url, dataUrl);
+    } catch (e) {
+      console.warn('Falha ao embutir imagem no PDF:', url, e);
+    }
+  }));
+
+  // Substitui todas as ocorrências
+  let out = html;
+  const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  map.forEach((dataUrl, abs) => {
+    // substitui tanto absoluto quanto relativo equivalente
+    const rel = abs.replace(window.location.origin, '');
+    const absPattern = new RegExp(`src=("|')${esc(abs)}\\1`, 'g');
+    const relPattern = new RegExp(`src=("|')${esc(rel)}\\1`, 'g');
+    out = out.replace(absPattern, `src="${dataUrl}"`).replace(relPattern, `src="${dataUrl}"`);
+  });
+
+  return out;
+}
+
+// Função para fazer download do PDF (abre janela de impressão)
+export async function downloadPDF(htmlContent: string, filename: string = 'atividades.pdf'): Promise<void> {
+  // Embute imagens como data URLs para evitar bloqueios/CORS e garantir carregamento no print
+  const htmlWithInlinedImgs = await inlineImagesInHTML(htmlContent);
+
+  const printWindow = window.open('', '_blank');
+  if (!printWindow) return;
+
+  printWindow.document.open();
+  printWindow.document.write(htmlWithInlinedImgs);
+  printWindow.document.close();
+
+  // Garante que todas as imagens estejam carregadas antes de imprimir
+  const waitForImages = () => {
+    const imgs = Array.from(printWindow.document.images || []);
+    if (imgs.length === 0) return Promise.resolve();
+    return Promise.all(
+      imgs.map((img) =>
+        img.complete && img.naturalWidth > 0
+          ? Promise.resolve()
+          : new Promise<void>((resolve) => {
+              img.addEventListener('load', () => resolve(), { once: true });
+              img.addEventListener('error', () => resolve(), { once: true });
+            })
+      )
+    );
+  };
+
+  try {
+    await waitForImages();
+  } catch {}
+
+  // Pequeno atraso para layout estabilizar
+  setTimeout(() => {
+    try {
+      printWindow.focus();
+      printWindow.print();
+    } catch {}
+  }, 200);
 }

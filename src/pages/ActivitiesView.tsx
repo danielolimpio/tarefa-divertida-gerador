@@ -159,9 +159,9 @@ export default function ActivitiesView() {
     setLoading(false);
   }, [slug, navigate]);
 
-  const handleDownloadSheet = (activity: any, index: number) => {
+  const handleDownloadSheet = async (activity: any, index: number) => {
     const htmlContent = generateActivityHTML([activity], '', 'colorido');
-    downloadPDF(htmlContent, `atividade_${index + 1}.pdf`);
+    await downloadPDF(htmlContent, `atividade_${index + 1}.pdf`);
     
     toast({
       title: "Download iniciado",
@@ -169,9 +169,9 @@ export default function ActivitiesView() {
     });
   };
 
-  const handleDownloadAll = () => {
+  const handleDownloadAll = async () => {
     const htmlContent = generateActivityHTML(activities, '', 'colorido');
-    downloadPDF(htmlContent, `${slug}_todas_atividades.pdf`);
+    await downloadPDF(htmlContent, `${slug}_todas_atividades.pdf`);
     
     toast({
       title: "Download iniciado",
