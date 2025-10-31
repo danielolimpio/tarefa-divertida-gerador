@@ -257,7 +257,7 @@ export default function ActivitiesView() {
                   <img 
                     src={activity.content.imageUrl} 
                     alt={activity.title}
-                    className="max-w-2xl w-full h-auto mx-auto"
+                    className="max-w-lg w-full h-auto mx-auto"
                   />
                 ) : (
                   <div className="p-6 min-h-[400px]">
