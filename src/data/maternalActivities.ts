@@ -29,6 +29,7 @@ import maternalColorirFestaJunina from '@/assets/maternal-colorir-festa-junina.p
 import maternalColorirFrutas from '@/assets/maternal-colorir-frutas.png';
 import maternalColorirPalhaco from '@/assets/maternal-colorir-palhaco.png';
 import maternalColorirMisturaCores from '@/assets/maternal-colorir-mistura-cores.png';
+import maternalColorirArcoIris from '@/assets/maternal-colorir-arco-iris.png';
 
 // 10 Folhas A4 de Português para Maternal - Com imagens completas
 export const portuguesMaternal: Activity[] = [
@@ -931,10 +932,10 @@ export const artesMaternal: Activity[] = [
     type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Desenhe o Rostinho do Menino',
+    title: 'Colorir o Arco-Íris',
     difficulty: 'facil',
     content: {
-      imageUrl: maternalColorirMenino,
+      imageUrl: maternalColorirArcoIris,
     }
   },
   {

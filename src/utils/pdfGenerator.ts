@@ -508,8 +508,8 @@ async function inlineImagesInHTML(html: string): Promise<string> {
   return out;
 }
 
-// Função para fazer download do PDF (abre janela de impressão)
-export async function downloadPDF(htmlContent: string, filename: string = 'atividades.pdf'): Promise<void> {
+// Função para imprimir o PDF (abre janela de impressão)
+export async function printPDF(htmlContent: string): Promise<void> {
   // Embute imagens como data URLs para evitar bloqueios/CORS e garantir carregamento no print
   const htmlWithInlinedImgs = await inlineImagesInHTML(htmlContent);
 
@@ -547,4 +547,23 @@ export async function downloadPDF(htmlContent: string, filename: string = 'ativi
       printWindow.print();
     } catch {}
   }, 200);
+}
+
+// Função para fazer download do PDF como arquivo
+export async function downloadPDF(htmlContent: string, filename: string = 'atividades.pdf'): Promise<void> {
+  // Embute imagens como data URLs
+  const htmlWithInlinedImgs = await inlineImagesInHTML(htmlContent);
+
+  // Cria um blob com o conteúdo HTML
+  const blob = new Blob([htmlWithInlinedImgs], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+
+  // Cria um link temporário para download
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename.replace('.pdf', '.html');
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }

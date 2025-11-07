@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Download, Printer, ArrowLeft, FileDown } from "lucide-react";
 import { getActivities } from "@/data/activities";
-import { generateActivityHTML, downloadPDF } from "@/utils/pdfGenerator";
+import { generateActivityHTML, downloadPDF, printPDF } from "@/utils/pdfGenerator";
 import { toast } from "@/components/ui/use-toast";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -161,20 +161,40 @@ export default function ActivitiesView() {
 
   const handleDownloadSheet = async (activity: any, index: number) => {
     const htmlContent = generateActivityHTML([activity], '', 'colorido');
-    await downloadPDF(htmlContent, `atividade_${index + 1}.pdf`);
+    await downloadPDF(htmlContent, `folha_${index + 1}.html`);
     
     toast({
       title: "Download iniciado",
+      description: `Folha ${index + 1} baixada com sucesso.`,
+    });
+  };
+
+  const handlePrintSheet = async (activity: any, index: number) => {
+    const htmlContent = generateActivityHTML([activity], '', 'colorido');
+    await printPDF(htmlContent);
+    
+    toast({
+      title: "Impressão iniciada",
       description: `Folha ${index + 1} preparada para impressão.`,
     });
   };
 
   const handleDownloadAll = async () => {
     const htmlContent = generateActivityHTML(activities, '', 'colorido');
-    await downloadPDF(htmlContent, `${slug}_todas_atividades.pdf`);
+    await downloadPDF(htmlContent, `${slug}_todas_atividades.html`);
     
     toast({
       title: "Download iniciado",
+      description: `Todas as ${activities.length} folhas baixadas com sucesso.`,
+    });
+  };
+
+  const handlePrintAll = async () => {
+    const htmlContent = generateActivityHTML(activities, '', 'colorido');
+    await printPDF(htmlContent);
+    
+    toast({
+      title: "Impressão iniciada",
       description: `Todas as ${activities.length} folhas preparadas para impressão.`,
     });
   };
@@ -217,14 +237,26 @@ export default function ActivitiesView() {
               {activities.length} folhas de atividades disponíveis para impressão
             </p>
             
-            <Button
-              onClick={handleDownloadAll}
-              size="lg"
-              className="bg-gradient-primary"
-            >
-              <FileDown className="mr-2 h-5 w-5" />
-              Baixar Todas as Folhas ({activities.length})
-            </Button>
+            <div className="flex gap-3 flex-wrap">
+              <Button
+                onClick={handleDownloadAll}
+                size="lg"
+                className="bg-gradient-primary"
+              >
+                <FileDown className="mr-2 h-5 w-5" />
+                Baixar Todas as Folhas ({activities.length})
+              </Button>
+              
+              <Button
+                onClick={handlePrintAll}
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
+                <Printer className="mr-2 h-5 w-5" />
+                Imprimir Todas as Folhas ({activities.length})
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -241,14 +273,25 @@ export default function ActivitiesView() {
                     Dificuldade: {activity.difficulty}
                   </p>
                 </div>
-                <Button
-                  onClick={() => handleDownloadSheet(activity, index)}
-                  variant="outline"
-                  size="sm"
-                >
-                  <Download className="mr-2 h-4 w-4" />
-                  Baixar Folha {index + 1}
-                </Button>
+                <div className="flex gap-2">
+                  <Button
+                    onClick={() => handleDownloadSheet(activity, index)}
+                    variant="outline"
+                    size="sm"
+                  >
+                    <Download className="mr-2 h-4 w-4" />
+                    Baixar Folha {index + 1}
+                  </Button>
+                  
+                  <Button
+                    onClick={() => handlePrintSheet(activity, index)}
+                    variant="outline"
+                    size="sm"
+                  >
+                    <Printer className="mr-2 h-4 w-4" />
+                    Imprimir Folha {index + 1}
+                  </Button>
+                </div>
               </div>
 
               {/* Conteúdo da atividade */}
@@ -355,8 +398,8 @@ export default function ActivitiesView() {
           ))}
         </div>
 
-        {/* Botão fixo para baixar todas */}
-        <div className="fixed bottom-6 right-6 z-40">
+        {/* Botões fixos para baixar e imprimir todas */}
+        <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-2">
           <Button
             onClick={handleDownloadAll}
             size="lg"
@@ -364,6 +407,16 @@ export default function ActivitiesView() {
           >
             <FileDown className="mr-2 h-5 w-5" />
             Baixar Todas
+          </Button>
+          
+          <Button
+            onClick={handlePrintAll}
+            size="lg"
+            variant="outline"
+            className="shadow-lg bg-background border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            <Printer className="mr-2 h-5 w-5" />
+            Imprimir Todas
           </Button>
         </div>
       </main>
