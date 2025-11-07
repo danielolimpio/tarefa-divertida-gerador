@@ -283,6 +283,24 @@ function renderExerciseContent(content: any): string {
   
   let html = `<p class="instructions">${content.instructions || ''}</p>`;
   
+  if (content.letters) {
+    html += '<div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin: 20px 0;">';
+    content.letters.forEach((letter: string) => {
+      html += `<div style="width: 60px; height: 60px; border: 2px solid #666; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold;">${letter}</div>`;
+    });
+    html += '</div>';
+  }
+  
+  if (content.items) {
+    html += '<div>';
+    content.items.forEach((item: any) => {
+      html += `<div style="margin: 15px 0; font-size: 24px;">
+        ${item.objects} = <span class="blank-line"></span>
+      </div>`;
+    });
+    html += '</div>';
+  }
+  
   if (content.words) {
     html += '<div class="exercise-grid">';
     content.words.forEach((item: any) => {
@@ -317,16 +335,6 @@ function renderExerciseContent(content: any): string {
       });
       html += '</div></div>';
     });
-  }
-  
-  if (content.items) {
-    html += '<div>';
-    content.items.forEach((item: any) => {
-      html += `<div style="margin: 15px 0; font-size: 24px;">
-        ${item.objects} = <span class="blank-line"></span>
-      </div>`;
-    });
-    html += '</div>';
   }
   
   return html;

@@ -19,6 +19,16 @@ import maternalMatematica7 from '@/assets/maternal-matematica-7.png';
 import maternalMatematica8 from '@/assets/maternal-matematica-8.png';
 import maternalMatematica9 from '@/assets/maternal-matematica-9.png';
 import maternalMatematica10 from '@/assets/maternal-matematica-10.png';
+import maternalColorirFormas from '@/assets/maternal-colorir-formas.png';
+import maternalColorirMenino from '@/assets/maternal-colorir-menino.png';
+import maternalColorirMenina from '@/assets/maternal-colorir-menina.png';
+import maternalColorirBaleia from '@/assets/maternal-colorir-baleia.png';
+import maternalColorirFlor from '@/assets/maternal-colorir-flor.png';
+import maternalColorirCoresFormas from '@/assets/maternal-colorir-cores-formas.png';
+import maternalColorirFestaJunina from '@/assets/maternal-colorir-festa-junina.png';
+import maternalColorirFrutas from '@/assets/maternal-colorir-frutas.png';
+import maternalColorirPalhaco from '@/assets/maternal-colorir-palhaco.png';
+import maternalColorirMisturaCores from '@/assets/maternal-colorir-mistura-cores.png';
 
 // 10 Folhas A4 de Português para Maternal - Com imagens completas
 export const portuguesMaternal: Activity[] = [
@@ -903,161 +913,116 @@ export const inglesMaternal: Activity[] = [
   }
 ];
 
-// 10 Atividades de Artes para Maternal
+// 10 Atividades de Artes para Maternal - Colorir
 export const artesMaternal: Activity[] = [
   {
-    id: 'ar-mat-001',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-001',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Cores Primárias',
+    title: 'Colorir Formas Geométricas',
     difficulty: 'facil',
     content: {
-      instructions: 'Escreva o nome das 3 cores primárias:',
-      words: [
-        { word: '1. _______________' },
-        { word: '2. _______________' },
-        { word: '3. _______________' }
-      ]
+      imageUrl: maternalColorirFormas,
     }
   },
   {
-    id: 'ar-mat-002',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-002',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Círculo',
+    title: 'Desenhe o Rostinho do Menino',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace 3 círculos grandes no espaço abaixo:',
-      words: [
-        { word: 'Círculo 1: _______________' },
-        { word: 'Círculo 2: _______________' },
-        { word: 'Círculo 3: _______________' }
-      ]
+      imageUrl: maternalColorirMenino,
     }
   },
   {
-    id: 'ar-mat-003',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-003',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Formas Geométricas',
+    title: 'Desenhe o Rostinho da Menina',
     difficulty: 'facil',
     content: {
-      instructions: 'Escreva o nome de 3 formas geométricas:',
-      words: [
-        { word: '1. _______________' },
-        { word: '2. _______________' },
-        { word: '3. _______________' }
-      ]
+      imageUrl: maternalColorirMenina,
     }
   },
   {
-    id: 'ar-mat-004',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-004',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Linha Reta e Curva',
+    title: 'Pinte o Peixe Grande e Circule o Pequeno',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe 3 linhas retas e 3 linhas curvas',
-      words: [
-        { word: 'Linhas retas: _______________' },
-        { word: 'Linhas curvas: _______________' }
-      ]
+      imageUrl: maternalColorirBaleia,
     }
   },
   {
-    id: 'ar-mat-005',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-005',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Meu Desenho Favorito',
+    title: 'Pinte a Flor - Vermelho e Amarelo',
     difficulty: 'facil',
     content: {
-      instructions: 'O que você mais gosta de desenhar? Escreva:',
-      words: [
-        { word: 'Eu gosto de desenhar: _______________' }
-      ]
+      imageUrl: maternalColorirFlor,
     }
   },
   {
-    id: 'ar-mat-006',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-006',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Materiais de Arte',
+    title: 'Cores e Formas Geométricas',
     difficulty: 'facil',
     content: {
-      instructions: 'Escreva o nome de 3 materiais usados para desenhar:',
-      words: [
-        { word: '1. _______________' },
-        { word: '2. _______________' },
-        { word: '3. _______________' }
-      ]
+      imageUrl: maternalColorirCoresFormas,
     }
   },
   {
-    id: 'ar-mat-007',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-007',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Grande e Pequeno',
+    title: 'Festa Junina - Pinte a Bandeirinha',
     difficulty: 'facil',
     content: {
-      instructions: 'Desenhe um círculo GRANDE e um círculo PEQUENO',
-      words: [
-        { word: 'Círculo GRANDE: _______________' },
-        { word: 'Círculo PEQUENO: _______________' }
-      ]
+      imageUrl: maternalColorirFestaJunina,
     }
   },
   {
-    id: 'ar-mat-008',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-008',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Quadrado',
+    title: 'Pinte as Frutas - Verde e Vermelho',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace 3 quadrados no espaço abaixo:',
-      words: [
-        { word: 'Quadrado 1: _______________' },
-        { word: 'Quadrado 2: _______________' },
-        { word: 'Quadrado 3: _______________' }
-      ]
+      imageUrl: maternalColorirFrutas,
     }
   },
   {
-    id: 'ar-mat-009',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-009',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Triângulo',
+    title: 'Pinte o Palhaço - Cores Primárias',
     difficulty: 'facil',
     content: {
-      instructions: 'Trace 3 triângulos no espaço abaixo:',
-      words: [
-        { word: 'Triângulo 1: _______________' },
-        { word: 'Triângulo 2: _______________' },
-        { word: 'Triângulo 3: _______________' }
-      ]
+      imageUrl: maternalColorirPalhaco,
     }
   },
   {
-    id: 'ar-mat-010',
-    type: 'exercicios',
+    id: 'ar-mat-colorir-010',
+    type: 'colorir',
     subject: 'artes',
     grade: ['maternal'],
-    title: 'Minha Cor Favorita',
+    title: 'Mistura de Cores',
     difficulty: 'facil',
     content: {
-      instructions: 'Responda:',
-      words: [
-        { word: 'Minha cor favorita é: _______________' },
-        { word: 'Por quê? _______________' }
-      ]
+      imageUrl: maternalColorirMisturaCores,
     }
   }
 ];

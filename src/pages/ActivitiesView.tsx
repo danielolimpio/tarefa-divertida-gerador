@@ -265,6 +265,29 @@ export default function ActivitiesView() {
                       <p className="font-medium text-base mb-4">{activity.content.instructions}</p>
                     )}
                     
+                    {/* Exercícios com letters (vogais, consoantes) */}
+                    {activity.content.letters && (
+                      <div className="flex gap-3 flex-wrap justify-center">
+                        {activity.content.letters.map((letter: string, idx: number) => (
+                          <div key={idx} className="w-16 h-16 border-2 border-gray-400 rounded-lg flex items-center justify-center">
+                            <span className="text-3xl font-bold">{letter}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    
+                    {/* Exercícios com items (contar objetos) */}
+                    {activity.content.items && (
+                      <div className="space-y-3">
+                        {activity.content.items.map((item: any, idx: number) => (
+                          <div key={idx} className="flex items-center gap-4 text-2xl">
+                            <span>{item.objects}</span>
+                            <span>= _____</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    
                     {/* Exercícios com palavras */}
                     {activity.content.words && (
                       <div className="space-y-2">

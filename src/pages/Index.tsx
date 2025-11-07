@@ -8,6 +8,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { BookOpen, GraduationCap, Palette, Eye, Brain } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { getActivities } from "@/data/activities";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 // Função para criar slug amigável para SEO
 const createSlug = (grade: string, type: string, subject: string) => {
@@ -113,24 +115,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <GraduationCap className="h-8 w-8 text-primary" />
-              <div>
-                <h1 className="text-2xl font-bold text-foreground">Gerador de Tarefas Escolares</h1>
-                <p className="text-sm text-muted-foreground">Atividades educativas e lúdicas para impressão</p>
-              </div>
-            </div>
-            <Button variant="outline" size="sm">
-              <Brain className="mr-2 h-4 w-4" />
-              Atividades Especiais
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
@@ -261,6 +246,7 @@ const Index = () => {
         </div>
       </main>
 
+      <Footer />
     </div>
   );
 };
