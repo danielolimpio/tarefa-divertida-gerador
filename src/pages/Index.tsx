@@ -10,6 +10,7 @@ import { toast } from "@/components/ui/use-toast";
 import { getActivities } from "@/data/activities";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEO } from "@/components/SEO";
 
 // Função para criar slug amigável para SEO
 const createSlug = (grade: string, type: string, subject: string) => {

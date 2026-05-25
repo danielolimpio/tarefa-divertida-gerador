@@ -8,6 +8,7 @@ import { generateActivityHTML, downloadPDF, printPDF } from "@/utils/pdfGenerato
 import { toast } from "@/components/ui/use-toast";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEO } from "@/components/SEO";
 
 // Função para converter slug em parâmetros
 const parseSlug = (slug: string) => {
