@@ -1,0 +1,18 @@
+# Tarefa Divertida
+
+> Gerador gratuito de atividades escolares para imprimir: educação infantil, alfabetização, matemática e reforço escolar.
+
+Tarefa Divertida é uma plataforma de geração de material pedagógico para professores, pais e educadores. Oferece atividades prontas para imprimir e baixar, alinhadas à BNCC, cobrindo desde educação infantil até os primeiros anos do ensino fundamental. O site inclui geradores de atividades personalizáveis, biblioteca organizada por categoria e artigos sobre educação e metodologias de ensino.
+
+## Pages
+
+- [/](/): Página inicial com destaques de atividades populares, categorias e depoimentos.
+- [/explorar](/explorar): Biblioteca completa de atividades pedagógicas organizadas por categoria, idade e nível de dificuldade.
+- [/educacao-infantil](/educacao-infantil): Atividades específicas para educação infantil — alfabetização inicial, coordenação motora, matemática básica e desenvolvimento socioemocional.
+- [/recursos](/recursos): Recursos pedagógicos complementares como guias da BNCC, vídeo-aulas e dicas de metodologias.
+- [/blog](/blog): Artigos e dicas sobre educação infantil, alfabetização, inclusão escolar, psicomotricidade e desenvolvimento pedagógico.
+- [/favoritos](/favoritos): Página para gerenciar atividades salvas e favoritas para acesso rápido.
+
+## Tools
+
+- [/gerador-atividade-escolar](/gerador-atividade-escolar): Ferramenta de geração de atividades escolares personalizadas para imprimir, com suporte a diversas matérias e séries.
