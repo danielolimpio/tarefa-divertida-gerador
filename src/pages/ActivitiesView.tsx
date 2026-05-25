@@ -8,6 +8,7 @@ import { generateActivityHTML, downloadPDF, printPDF } from "@/utils/pdfGenerato
 import { toast } from "@/components/ui/use-toast";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEO } from "@/components/SEO";
 
 // Função para converter slug em parâmetros
 const parseSlug = (slug: string) => {
@@ -212,6 +213,7 @@ export default function ActivitiesView() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5">
+      <SEO title={`${names.subject || "Atividades"} - ${names.grade || ""} | Imprimir`} description={`Folhas de atividade de ${names.subject || "ensino"} (${names.type || "exercícios"}) para ${names.grade || "alunos"}. Baixe e imprima gratuitamente.`} />
       <Header />
       
       <main className="container mx-auto px-4 py-8">

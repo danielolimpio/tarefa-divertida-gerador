@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -59,6 +60,7 @@ const Favoritos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Meus Favoritos | Atividades Escolares Salvas" description="Acesse rapidamente as atividades escolares que você salvou para usar em suas aulas." />
       <Header />
       
       <main className="pb-20">

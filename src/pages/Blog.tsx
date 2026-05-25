@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -87,6 +88,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Blog Educacional | Artigos e Dicas para Educadores" description="Artigos sobre educação infantil, metodologias de ensino, inclusão escolar, alfabetização e desenvolvimento pedagógico." />
       <Header />
       
       <main className="pb-20">

@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -154,6 +155,7 @@ const Recursos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Recursos Pedagógicos | Guias BNCC e Materiais" description="Guias BNCC, planos de aula, vídeos, infográficos e materiais pedagógicos para professores." />
       <Header />
       
       <main className="pb-20">

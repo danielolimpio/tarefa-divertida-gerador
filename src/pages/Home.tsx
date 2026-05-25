@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
@@ -12,6 +13,7 @@ import { BenefitsSection } from "@/components/home/BenefitsSection";
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Atividades Escolares para Imprimir | Gerador de Tarefas" description="Gerador gratuito de atividades escolares para imprimir: educação infantil, alfabetização, reforço escolar e material adaptado." />
       <Header />
       
       <main>

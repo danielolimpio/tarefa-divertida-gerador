@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -105,6 +106,7 @@ const Explorar = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Explorar Atividades Escolares | Biblioteca Completa" description="Explore a biblioteca completa de atividades escolares por categoria, série e tipo. Material pedagógico gratuito." />
       <Header />
       
       <main className="pb-20">

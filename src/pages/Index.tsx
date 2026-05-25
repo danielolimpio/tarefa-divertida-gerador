@@ -10,6 +10,7 @@ import { toast } from "@/components/ui/use-toast";
 import { getActivities } from "@/data/activities";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SEO } from "@/components/SEO";
 
 // Função para criar slug amigável para SEO
 const createSlug = (grade: string, type: string, subject: string) => {
@@ -115,6 +116,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5">
+      <SEO title="Gerador de Atividade Escolar | Crie Tarefas Personalizadas" description="Crie atividades escolares personalizadas por série, tipo e matéria. Gere e imprima tarefas em poucos cliques." />
       <Header />
 
       {/* Main Content */}
