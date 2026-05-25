@@ -60,6 +60,7 @@ const Favoritos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Meus Favoritos | Atividades Escolares Salvas" description="Acesse rapidamente as atividades escolares que você salvou para usar em suas aulas." />
       <Header />
       
       <main className="pb-20">

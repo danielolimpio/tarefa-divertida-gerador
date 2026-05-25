@@ -155,6 +155,7 @@ const Recursos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Recursos Pedagógicos | Guias BNCC e Materiais" description="Guias BNCC, planos de aula, vídeos, infográficos e materiais pedagógicos para professores." />
       <Header />
       
       <main className="pb-20">

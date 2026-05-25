@@ -62,6 +62,7 @@ const EducacaoInfantil = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Educação Infantil | Atividades para Maternal e Pré-escola" description="Atividades de educação infantil: alfabetização inicial, coordenação motora, matemática básica e psicomotricidade." />
       <Header />
       
       <main>
