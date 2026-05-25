@@ -116,6 +116,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5">
+      <SEO title="Gerador de Atividade Escolar | Crie Tarefas Personalizadas" description="Crie atividades escolares personalizadas por série, tipo e matéria. Gere e imprima tarefas em poucos cliques." />
       <Header />
 
       {/* Main Content */}

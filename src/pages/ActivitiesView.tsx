@@ -213,6 +213,7 @@ export default function ActivitiesView() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5">
+      <SEO title={`${activities[0]?.subject || "Atividades"} - ${activities[0]?.grade || ""} | Atividades para Imprimir`} description={`Folhas de atividade de ${activities[0]?.subject || "ensino"} para ${activities[0]?.grade || "alunos"}. Baixe e imprima gratuitamente.`} />
       <Header />
       
       <main className="container mx-auto px-4 py-8">
