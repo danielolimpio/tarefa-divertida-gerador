@@ -161,7 +161,7 @@ const Favoritos = () => {
               </>
             ) : (
               <div className="text-center py-20">
-                <Heart className="h-16 w-16 text-muted-foreground/30 mx-auto mb-4" />
+                <Heart className="h-16 w-16 text-muted-foreground mx-auto mb-4" aria-hidden="true" />
                 <h2 className="text-2xl font-semibold text-foreground mb-2">
                   Nenhuma atividade favorita ainda
                 </h2>

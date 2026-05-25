@@ -149,7 +149,7 @@ const ColoringActivity: React.FC<{ activity: Activity }> = ({ activity }) => {
       <div className="flex gap-4 justify-center">
         {content.letters && content.letters.map((letter: string, idx: number) => (
           <div key={idx} className="w-20 h-20 border-4 border-dashed border-gray-400 rounded-lg flex items-center justify-center">
-            <span className="text-4xl font-bold text-gray-300">{letter}</span>
+            <span className="text-4xl font-bold text-foreground">{letter}</span>
           </div>
         ))}
       </div>
