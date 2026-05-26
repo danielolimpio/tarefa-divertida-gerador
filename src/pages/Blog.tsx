@@ -88,7 +88,25 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Blog Educacional | Artigos e Dicas para Educadores" description="Artigos sobre educação infantil, metodologias de ensino, inclusão escolar, alfabetização e desenvolvimento pedagógico." />
+      <SEO
+        title="Blog Educacional | Artigos e Dicas para Educadores"
+        description="Artigos sobre educação infantil, metodologias de ensino, inclusão escolar, alfabetização e desenvolvimento pedagógico."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Blog Tarefa Divertida",
+          url: "https://tarefa-divertida-gerador.lovable.app/blog",
+          inLanguage: "pt-BR",
+          blogPost: [featuredPost, ...posts].map((p) => ({
+            "@type": "BlogPosting",
+            headline: p.title,
+            description: p.excerpt,
+            author: { "@type": "Person", name: p.author },
+            datePublished: p.date,
+            articleSection: p.category,
+          })),
+        }}
+      />
       <Header />
       
       <main className="pb-20">

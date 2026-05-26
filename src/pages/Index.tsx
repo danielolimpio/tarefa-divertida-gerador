@@ -116,7 +116,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5">
-      <SEO title="Gerador de Atividade Escolar | Crie Tarefas Personalizadas" description="Crie atividades escolares personalizadas por série, tipo e matéria. Gere e imprima tarefas em poucos cliques." />
+      <SEO
+        title="Gerador de Atividade Escolar | Crie Tarefas Personalizadas"
+        description="Crie atividades escolares personalizadas por série, tipo e matéria. Gere e imprima tarefas em poucos cliques."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Gerador de Atividades Escolares",
+          applicationCategory: "EducationalApplication",
+          operatingSystem: "Web",
+          url: "https://tarefa-divertida-gerador.lovable.app/gerador-atividade-escolar",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "BRL" },
+          description: "Crie atividades escolares personalizadas por série, tipo e matéria.",
+        }}
+      />
       <Header />
 
       {/* Main Content */}

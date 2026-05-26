@@ -155,7 +155,18 @@ const Recursos = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Recursos Pedagógicos | Guias BNCC e Materiais" description="Guias BNCC, planos de aula, vídeos, infográficos e materiais pedagógicos para professores." />
+      <SEO
+        title="Recursos Pedagógicos | Guias BNCC e Materiais"
+        description="Guias BNCC, planos de aula, vídeos, infográficos e materiais pedagógicos para professores."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Recursos Pedagógicos",
+          url: "https://tarefa-divertida-gerador.lovable.app/recursos",
+          inLanguage: "pt-BR",
+          about: "BNCC, planos de aula, materiais para professores",
+        }}
+      />
       <Header />
       
       <main className="pb-20">

@@ -62,7 +62,18 @@ const EducacaoInfantil = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Educação Infantil | Atividades para Maternal e Pré-escola" description="Atividades de educação infantil: alfabetização inicial, coordenação motora, matemática básica e psicomotricidade." />
+      <SEO
+        title="Educação Infantil | Atividades para Maternal e Pré-escola"
+        description="Atividades de educação infantil: alfabetização inicial, coordenação motora, matemática básica e psicomotricidade."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Atividades de Educação Infantil",
+          url: "https://tarefa-divertida-gerador.lovable.app/educacao-infantil",
+          inLanguage: "pt-BR",
+          about: "Educação Infantil, Maternal, Pré-escola",
+        }}
+      />
       <Header />
       
       <main>
