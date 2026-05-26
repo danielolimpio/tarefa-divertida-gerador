@@ -106,7 +106,18 @@ const Explorar = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO title="Explorar Atividades Escolares | Biblioteca Completa" description="Explore a biblioteca completa de atividades escolares por categoria, série e tipo. Material pedagógico gratuito." />
+      <SEO
+        title="Explorar Atividades Escolares | Biblioteca Completa"
+        description="Explore a biblioteca completa de atividades escolares por categoria, série e tipo. Material pedagógico gratuito."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Biblioteca de Atividades Escolares",
+          url: "https://tarefa-divertida-gerador.lovable.app/explorar",
+          inLanguage: "pt-BR",
+          description: "Coleção de atividades pedagógicas organizadas por categoria, série e tipo.",
+        }}
+      />
       <Header />
       
       <main className="pb-20">
