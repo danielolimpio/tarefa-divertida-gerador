@@ -345,6 +345,129 @@ function renderExerciseContent(content: any): string {
   return html;
 }
 
+// Renderiza uma das 50 folhas de Português para o Maternal.
+// Layout A4 com cabeçalho (Nome/Data/Turma), título grande, instrução clara
+// e elementos visuais em cartões com emojis vetoriais e área de resposta.
+const EMOJI_MAP: Record<string, string> = {
+  abelha: '🐝', aviao: '✈️', bola: '⚽', casa: '🏠', elefante: '🐘', estrela: '⭐',
+  gato: '🐱', igreja: '⛪', ilha: '🏝️', uva: '🍇', ovo: '🥚', ovelha: '🐑',
+  dado: '🎲', unicornio: '🦄', maca: '🍎', maçã: '🍎', maca_fruta: '🍎',
+  banana: '🍌', carro: '🚗', cachorro: '🐶', sol: '☀️', dedo: '☝️', flor: '🌸',
+  foca: '🦭', formiga: '🐜', pato: '🦆', macaco: '🐒', lua: '🌙', coracao: '❤️',
+  quadrado: '🟦', chave: '🔑', arvore: '🌳', anel: '💍', abacaxi: '🍍',
+  meia: '🧦', sapato: '👟', chapeu: '🎩', menino: '👦', menina: '👧',
+  boneca: '🪆', carrinho: '🚙', crianca: '🧒', peixe: '🐟', aquario: '🐠',
+  passaro: '🐦', ninho: '🪺', casinha: '🏡', osso: '🦴', cenoura: '🥕',
+  bala: '🍬', refrigerante: '🥤', barco: '⛵', agua: '💧', estrada: '🛣️',
+  ceu: '☁️', vaca: '🐄', galinha: '🐔', leao: '🦁', porco: '🐷', nuvem: '☁️',
+  vaso: '🪴', olho: '👁️', boca: '👄', nariz: '👃', luva: '🧤', mao: '✋',
+  pe: '🦶', cabeca: '🧑', pincel: '🖌️', estetoscopio: '🩺', panela: '🍳',
+  medico: '👨‍⚕️', pintor: '🎨', cozinheiro: '👨‍🍳', mamae: '👩', papai: '👨',
+  bebe: '👶', circulo: '⭕', triangulo: '🔺', janela: '🪟', telhado: '🏠',
+  pinto: '🐤', bezerro: '🐄', filhote: '🐕', pao: '🍞', borboleta: '🦋',
+};
+
+function normalizeKey(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '');
+}
+
+function emojiFor(label: string): string {
+  const key = normalizeKey(label);
+  if (EMOJI_MAP[key]) return EMOJI_MAP[key];
+  // tenta correspondência parcial (ex.: "elefantegrande" -> "elefante")
+  for (const k of Object.keys(EMOJI_MAP)) {
+    if (key.includes(k)) return EMOJI_MAP[k];
+  }
+  return '✏️';
+}
+
+function renderFolhaMaternal(content: any): string {
+  const { instructions, elementos = [], acao = 'circular', tema = '', numero } = content;
+
+  const header = `
+    <div style="display:flex; gap:20px; font-family: Arial, sans-serif; font-size: 12pt; border-bottom: 2px solid #333; padding-bottom: 8px; margin-bottom: 16px;">
+      <div style="flex:2;">Nome: <span style="display:inline-block; border-bottom:1.5px solid #333; min-width:220px;">&nbsp;</span></div>
+      <div style="flex:1;">Data: <span style="display:inline-block; border-bottom:1.5px solid #333; min-width:90px;">&nbsp;</span></div>
+      <div style="flex:1;">Turma: <span style="display:inline-block; border-bottom:1.5px solid #333; min-width:90px;">&nbsp;</span></div>
+    </div>
+  `;
+
+  const titulo = `
+    <h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 0 0 6px 0; text-align:center;">
+      ${tema}
+    </h2>
+    ${numero ? `<p style="text-align:center; font-family: Arial, sans-serif; font-size: 10pt; color:#555; margin: 0 0 14px 0;">Folha ${numero} de 50 — Português · Maternal</p>` : ''}
+  `;
+
+  const instr = `
+    <p style="font-family: Arial, sans-serif; font-size: 14pt; font-weight: 500; margin: 10px 0 22px 0;">
+      ${instructions}
+    </p>
+  `;
+
+  // Detecta se é atividade "ligar" com pares "A-B"
+  const isPairFormat =
+    elementos.length > 0 &&
+    elementos.every((e: string) => typeof e === 'string' && e.includes('-') && !e.startsWith('Opcoes'));
+
+  let corpo = '';
+
+  if (acao === 'ligar' && isPairFormat) {
+    // Duas colunas com linha guia entre elas
+    corpo = '<div style="display:flex; flex-direction:column; gap:24px; margin: 10px 0;">';
+    elementos.forEach((e: string) => {
+      const [a, b] = e.split('-').map((s: string) => s.trim());
+      corpo += `
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
+          <div style="flex:1; text-align:center; border:3px solid #333; border-radius:12px; padding:14px;">
+            <div style="font-size:56px; line-height:1;">${emojiFor(a)}</div>
+            <div style="font-family: Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:6px;">${a.toUpperCase()}</div>
+          </div>
+          <div style="flex:1; border-top: 3px dashed #666; height:0;"></div>
+          <div style="flex:1; text-align:center; border:3px solid #333; border-radius:12px; padding:14px;">
+            <div style="font-size:44px; line-height:1;">${emojiFor(b)}</div>
+            <div style="font-family: Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:6px;">${b.toUpperCase()}</div>
+          </div>
+        </div>
+      `;
+    });
+    corpo += '</div>';
+  } else {
+    // Grid de cartões com espaço para marcar/circular/pintar/traçar
+    corpo = '<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 10px 0;">';
+    elementos.forEach((e: string) => {
+      const label = e.replace(/^Opcoes:\s*/i, '').replace(/^Palavra:\s*/i, '');
+      const emoji = emojiFor(label);
+      const shape =
+        acao === 'marcar'
+          ? '<div style="width:56px; height:56px; margin: 12px auto 0; border:3px solid #333; display:flex; align-items:center; justify-content:center; font-size:28px; color:#bbb;">X</div>'
+          : acao === 'tracar' || acao === 'contornar' || acao === 'desenhar'
+          ? '<div style="width:80%; margin: 12px auto 0; border-top:3px dashed #333; height:0;"></div>'
+          : '<div style="width:56px; height:56px; margin: 12px auto 0; border:3px dashed #333; border-radius:50%;"></div>';
+      corpo += `
+        <div style="border:3px solid #333; border-radius:14px; padding:18px; text-align:center; min-height:170px;">
+          <div style="font-size:64px; line-height:1;">${emoji}</div>
+          <div style="font-family: Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:10px;">${label.toUpperCase()}</div>
+          ${shape}
+        </div>
+      `;
+    });
+    corpo += '</div>';
+  }
+
+  const rodapePedagogico = `
+    <p style="font-family: Arial, sans-serif; font-size: 9pt; color:#777; margin-top: 20px; text-align:center;">
+      BNCC · Educação Infantil · Campo: Escuta, fala, pensamento e imaginação.
+    </p>
+  `;
+
+  return `<div style="page-break-inside: avoid;">${header}${titulo}${instr}${corpo}${rodapePedagogico}</div>`;
+}
+
 function renderColoringContent(content: any): string {
   let html = `<p class="instructions">${content.instructions}</p>`;
   html += '<div style="text-align: center;">';
