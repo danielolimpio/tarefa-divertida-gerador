@@ -651,6 +651,7 @@ import {
   logicaMaternal,
   memoriaMaternal,
 } from './maternalActivities';
+import { portuguesMaternalFolhas50 } from './portuguesMaternalFolhas50';
 
 // Função para obter atividades filtradas
 export function getActivities(filters: {
@@ -661,6 +662,7 @@ export function getActivities(filters: {
 }): Activity[] {
   const allActivities = [
     ...portuguesMaternal,
+    ...portuguesMaternalFolhas50,
     ...matematicaMaternal,
     ...cienciasMaternal,
     ...historiaMaternal,

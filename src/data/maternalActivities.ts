@@ -1,4 +1,5 @@
 import { Activity } from './activities';
+import { portuguesMaternalFolhas50 } from './portuguesMaternalFolhas50';
 import maternalVogaisTrenzinho from '@/assets/maternal-vogais-trenzinho.png';
 import maternalContorneA from '@/assets/maternal-contorne-a.png';
 import maternalContorneE from '@/assets/maternal-contorne-e.png';
@@ -1501,6 +1502,7 @@ export const memoriaMaternal: Activity[] = [
 // Exportar todas as atividades do maternal
 export const allMaternalActivities: Activity[] = [
   ...portuguesMaternal,
+  ...portuguesMaternalFolhas50,
   ...matematicaMaternal,
   ...cienciasMaternal,
   ...historiaMaternal,
