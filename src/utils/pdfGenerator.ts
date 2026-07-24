@@ -274,6 +274,11 @@ export function generateActivityHTML(
 
 // Funções auxiliares para renderizar cada tipo de conteúdo
 function renderExerciseContent(content: any): string {
+  // Folha do Maternal (50 folhas de Português)
+  if (content && content.folhaMaternal) {
+    return renderFolhaMaternal(content);
+  }
+
   // Se houver imageUrl, renderizar apenas a imagem
   if (content.imageUrl) {
     return `<div style="text-align: center; margin: 20px 0;">
